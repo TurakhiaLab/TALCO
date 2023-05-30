@@ -1,3 +1,4 @@
 # TALCO
-
-![](images/TALCO-image.png)
+<p align="center">
+	<img src="images/TALCO-image.png"/>
+</p>
