@@ -21,30 +21,47 @@ module wrapper #(
     dbram_wr_ifc.slave  qwr_ifc,
     input   logic   load,
     input   logic   start,
+    input   logic   [DATA_WIDTH - 1: 0]  reference_length,
+    input   logic   [DATA_WIDTH - 1: 0]  query_length,
 
     output  logic   done
 );
     enum {WAIT, LOAD_DATA, DUMY, ALIGN, TB, DONE} state;
     
-    // fifo
-    fifo_rd_wr_ifc #(.DEPTH(8), .DATA_WIDTH(NUM_EXTEND * FIFO_WIDTH)) fifo_ifc ();
+    // fifo compute-extend
+    fifo_rd_wr_ifc #(.DEPTH(8), .DATA_WIDTH(NUM_EXTEND * FIFO_WIDTH)) fifo_ifc_c2e ();
+
+    // fifo reduce_tbbram
+    fifo_rd_wr_ifc #(.DEPTH(8), .DATA_WIDTH(NUM_EXTEND * FIFO_WIDTH)) fifo_ifc_e2t ();
+
+    // extend-reduce interface
+    ext2red_ifc #(
+        .NUM_EXTEND(NUM_EXTEND),
+        .FIFO_WIDTH(FIFO_WIDTH)
+    ) ext2red_ifc_inst ();
+
+    // global interface (kmin, kmax)
+    global_ifc #(
+        .TILE_SIZE(TILE_SIZE)
+    ) global_ifc_inst ();
+    logic new_score;
 
     //Extend
     logic	[NUM_EXTEND - 1: 0]	is_finish;
 
-
-    // // WFA registers
-    // logic   [LOG_TILE_SIZE: 0] kmin;
-    // logic   [LOG_TILE_SIZE: 0] kmax;
-    // logic   extend_on;
-
-    // assign ref_addr = STATE == LOAD_DATA ? rwaddr: 0;
-    // assign query_addr = STATE == LOAD_DATA ? qwaddr: 0;
+    // Reduce
+    logic   wr2tb; // 1 when all wavefronts are extended and fifo_ifc_c2e is empty
 
 
     always_ff @(posedge clk) begin
         if (rst) begin
-
+            global_ifc_inst.ref_end_cord <= reference_length;
+            global_ifc_inst.query_end_cord <= query_length;
+            global_ifc_inst.drop <= 50;
+            global_ifc_inst.kmin <= 0;
+            global_ifc_inst.kmax <= 0;
+            new_score <= 0;
+            wr2tb <= 0;
         end
         else begin
             case (state)
@@ -55,12 +72,15 @@ module wrapper #(
                     
                 end
                 DUMY: begin
-                    fifo_ifc.fifo_din <= {1'b1,239'b0};
-                    fifo_ifc.fifo_wen <= 1;
+                    fifo_ifc_c2e.fifo_din <= {1'b1,10'b0,9'b0,10'b0, 1'b1,10'b1111111110,9'b1111,10'b0, 180'b0};
+                    fifo_ifc_c2e.fifo_wen <= 1;
+                    new_score <= 1;
                 end
                 ALIGN: begin
-                    fifo_ifc.fifo_wen <= 0;
-                    fifo_ifc.fifo_ren <= (!fifo_ifc.fifo_empty) & (&is_finish);
+                    fifo_ifc_c2e.fifo_wen <= 0;
+                    new_score <= 0;
+                    fifo_ifc_c2e.fifo_ren <= (!fifo_ifc_c2e.fifo_empty) & (&is_finish);
+                    wr2tb <= fifo_ifc_c2e.fifo_empty & is_finish;
                 end
             endcase
         end
@@ -109,17 +129,49 @@ module wrapper #(
             .rst(rst),
             .rwr_ifc(rwr_ifc),
             .qwr_ifc(qwr_ifc),
-            .fifo_ifc(fifo_ifc),
-            // .on(extend_on),
-            // .kmin(kmin),
-            // .kmax(kmax),
-            // .rin(),
-            // .qin(),
-            // .done()
+            .fifo_ifc(fifo_ifc_c2e),
             .is_finish(is_finish),
-            .load(state==LOAD_DATA)
+            .load(state==LOAD_DATA),
+            .ext2red_ifc_inst(ext2red_ifc_inst)
         );
     endgenerate
+
+    generate
+        reduce #(
+            .NUM_EXTEND(NUM_EXTEND),
+            .EXTEND_LEN(EXTEND_LEN),
+            .TILE_SIZE(TILE_SIZE),
+            .DATA_WIDTH(DATA_WIDTH),
+            .BLOCK_WIDTH(BLOCK_WIDTH),
+            .TB_ADDR(TB_ADDR),
+            .FIFO_WIDTH(FIFO_WIDTH)
+        ) reduce_instance (
+            .clk(clk),
+            .rst(rst),
+            .new_score(new_score),
+            .wr2tb(wr2tb),
+            .global_ifc_inst(global_ifc_inst),
+            .ext2red_ifc_inst(ext2red_ifc_inst),
+            .fifo_ifc_e2t(fifo_ifc_e2t),
+            .fifo_dout(fifo_ifc_e2t.fifo_dout)
+        );
+    endgenerate
+
+    generate
+	fifo #(
+		.DEPTH(8), 
+		.DATA_WIDTH((DATA_WIDTH + 1)*NUM_EXTEND) // 8*{is_valid, k, offset, Tbaddr}
+	) fifo_inst (
+		.clk(clk),
+		.rst(rst),
+		.wen(fifo_ifc_e2t.fifo_wen),
+		.ren(fifo_ifc_e2t.fifo_ren),
+		.din(fifo_ifc_e2t.fifo_din),
+		.dout(fifo_ifc_e2t.fifo_dout),
+		.full(fifo_ifc_e2t.fifo_full),
+		.empty(fifo_ifc_e2t.fifo_empty)			
+	);
+	endgenerate
 
 
 endmodule

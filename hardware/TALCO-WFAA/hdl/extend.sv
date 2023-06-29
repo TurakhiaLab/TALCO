@@ -16,11 +16,9 @@ module extend_array #(
 	dbram_wr_ifc.slave	rwr_ifc,
 	dbram_wr_ifc.slave	qwr_ifc,
 	fifo_rd_wr_ifc.slave fifo_ifc,
-	// input 	logic	on,
-	// input	logic	[4*EXTEND_LEN - 1: 0]	rin,	// 8 ref char
-	// input	logic	[4*EXTEND_LEN - 1: 0]	qin,	// 8 query char
 	output	logic	[NUM_EXTEND - 1: 0]	is_finish,
-	input	logic	load
+	input	logic	load,
+	ext2red_ifc.slave	ext2red_ifc_inst
 );
 	
 	// broadcast input ref and query data to NUM_EXTEND BRAMs
@@ -42,8 +40,12 @@ module extend_array #(
 		if (rst)
 			ren_delay <= 0;
 
-		else
+		else begin
 			ren_delay <= fifo_ifc.fifo_ren;
+			if (ren_delay) begin
+				ext2red_ifc_inst.read <= 0;
+			end
+		end
 			
 	end
 
@@ -67,18 +69,23 @@ module extend_array #(
 			logic 	is_valid;
 			logic	is_extend;
 			logic	is_complete;
+			logic 	ren_delay2;
 
 			always_ff @(posedge clk) begin
 				if (rst) begin
 					{is_valid, k, o_offset, tbaddr} <= 0;
 					is_extend <= 1;
 					is_finish[i] <= 1;
+					ren_delay2 <=0;
 				end
 				else begin
 					case (state)
 						W: begin
 							if (ren_delay) begin
 								{is_valid, k, o_offset, tbaddr} <= fifo_dout[(i+1)*FIFO_WIDTH - 1: i*FIFO_WIDTH];
+								ext2red_ifc_inst.offset[(i+1)*FIFO_WIDTH - 1: i*FIFO_WIDTH] <= {0};
+								ext2red_ifc_inst.valid[i] <= 0;
+								ren_delay2 <=1;
 							end
 						end
 						V: begin
@@ -91,6 +98,9 @@ module extend_array #(
 						C:	begin
 							is_extend <= 0;
 							is_finish[i] <= 1;
+							ext2red_ifc_inst.offset[(i+1)*FIFO_WIDTH - 1: i*FIFO_WIDTH] <= {is_valid, k, o_offset, tbaddr};
+							ext2red_ifc_inst.valid[i] <= 1;
+							ren_delay2 <=0;
 						end
 					endcase
 				end
@@ -105,6 +115,11 @@ module extend_array #(
 						if (is_valid) begin
 							state <= V;
 						end
+						else begin
+							if (ren_delay2) begin
+								state <= C;
+							end
+						end
 					end
 					V: begin
 						// Set Address
@@ -117,7 +132,7 @@ module extend_array #(
 						end
 						else begin
 							state <= V;
-						end;
+						end
 					end
 				endcase
 			end
@@ -184,11 +199,6 @@ module extend #(
 	input	rst,
 	dbram_wr_ifc.slave	rwr_ifc,
 	dbram_wr_ifc.slave	qwr_ifc,
-	// input	start,
-	// input	[4*EXTEND_LEN - 1: 0]	rin,
-	// input	[4*EXTEND_LEN - 1: 0]	qin,
-	// output	[LOG_EXTEND_LEN - 1: 0]	offset,
-	// input	logic	[FIFO_WIDTH - 1: 0]	fifo_dout,
 	input 	logic	[LOG_TILE_SIZE: 0]	k,
 	input 	logic 	[LOG_TILE_SIZE - 1: 0]	roffset,
 	output 	logic 	[LOG_TILE_SIZE - 1: 0]	offset,
@@ -222,7 +232,7 @@ module extend #(
 	assign qoffset = roffset - k;
 	assign idxr = roffset%BLOCK_WIDTH;
 	assign idxq = qoffset%BLOCK_WIDTH;
-	assign max_extend = BLOCK_WIDTH - ($signed(idxr - idxq) >= 0? idxr: idxq);
+	assign max_extend = BLOCK_WIDTH - (idxr >= idxq? idxr: idxq);
 	assign offset[LOG_TILE_SIZE - 1: LOG_BLOCK_WIDTH] = roffset[LOG_TILE_SIZE - 1: LOG_BLOCK_WIDTH] + extended[LOG_BLOCK_WIDTH];
 	assign offset[LOG_BLOCK_WIDTH - 1: 0] = extended[LOG_BLOCK_WIDTH - 1: 0];
 		
@@ -247,15 +257,6 @@ module extend #(
 		.out(extended),
 		.is_complete(is_complete)
 	);
-
-	// always_ff @(posedge clk) begin 
-	// 	if (rst || !is_valid) begin
-	// 		finish <= 1;
-	// 	end
-	// 	else if (valid) begin
-	// 		finish <= is_complete; // if valid and extend is complete.
-	// 	end
-	// end
 
 
 	BRAM #(
