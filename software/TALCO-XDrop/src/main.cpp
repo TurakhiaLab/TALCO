@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include <boost/program_options.hpp> 
-#include "xact.hpp"
+#include "TALCO-XDrop.hpp"
 #include "kseq.h"
 #include "zlib.h"
 
@@ -16,11 +16,16 @@ int main(int argc, char** argv) {
     std::string referenceFilename;
     std::string queryFilename;
     
+    int marker = 512;
+    int xdrop = 100;
+
     // Command line options
     po::options_description desc{"Options"};
     desc.add_options()
-        ("reference,r", po::value<std::string>(&referenceFilename)->required(), "Reference filename")
-        ("query,q", po::value<std::string>(&queryFilename)->required(), "Query filename")
+        ("reference,r", po::value<std::string>(&referenceFilename)->required(), "Reference filename (required)")
+        ("query,q", po::value<std::string>(&queryFilename)->required(), "Query filename (required)")
+        ("xdrop,x", po::value<int>(&xdrop), "X-Drop value")
+        ("marker,M", po::value<int>(&marker), "Marker")
         ("help,h", "Print help messages");
 
     po::options_description allOptions;
@@ -90,7 +95,7 @@ int main(int argc, char** argv) {
 
     timer.Start();
     // fprintf(stderr, "Initializing params and device arrays.\n");
-    Xact::Params params (2, -1, -2, -1, 100, 512);
+    Talco_xdrop::Params params (2, -1, -2, -1, xdrop, marker);
     // fprintf(stderr, "Completed in %ld msec \n\n", timer.Stop());
 
     timer.Start();
