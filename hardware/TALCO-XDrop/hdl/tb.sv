@@ -21,6 +21,7 @@
 
 
 module tb();
+    parameter FILE= "../../../dataset/sequences.fa"
     parameter PE_WIDTH = 16;
     parameter DATA_WIDTH = 8;
     parameter NUM_BLOCK  = 1;
@@ -171,7 +172,7 @@ module tb();
         ref_=0; query_=0; read = 0; curr_ref_addr = 0; curr_query_addr = 0;
         start_ref_addr = 0; start_query_addr = 0;
         
-        fd = $fopen("sequences.fa", "r");
+        fd = $fopen(FILE, "r");
         if (!fd) begin
             $display("Could not read the sequences\n");
             $finish;
