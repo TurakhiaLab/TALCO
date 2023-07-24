@@ -1,6 +1,6 @@
 # TALCO
 <p align="center">
-	<img src="images/TALCO-image.png"/>
+	<img src="images/TALCO-image.png" width="400"/>
 </p>
 
 **TALCO** is a novel method for **T**iling genome sequence **AL**ignment using
