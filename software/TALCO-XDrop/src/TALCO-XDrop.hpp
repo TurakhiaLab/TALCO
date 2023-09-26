@@ -36,7 +36,8 @@ namespace Talco_xdrop {
         int32_t &query_idx,
         std::vector<int8_t> &aln,
         int8_t &state,
-        bool &last_tile
+        bool &last_tile,
+        const int &tile
     );
 
     int32_t Reduction_tree (
@@ -51,6 +52,7 @@ namespace Talco_xdrop {
         const int16_t tb_start_ftr,
         const int8_t tb_state,
         const int16_t tb_start_idx,
+        const int16_t ref_start_idx,
         const std::vector<int8_t> &tb,
         std::vector<int8_t> &aln
     );

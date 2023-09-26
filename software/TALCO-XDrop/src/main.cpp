@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
     std::string referenceFilename;
     std::string queryFilename;
     
-    int marker = 512;
+    int marker = 1024;
     int xdrop = 100;
 
     // Command line options
