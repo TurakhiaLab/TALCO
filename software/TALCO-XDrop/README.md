@@ -8,7 +8,7 @@
 ```
 git clone https://github.com/TurakhiaLab/TALCO.git
 cd TALCO/software/TALCO-XDrop
-mkdir build && cd build
+mkdir -p build && cd build
 cmake ..
 make TALCO-XDrop
 ```
