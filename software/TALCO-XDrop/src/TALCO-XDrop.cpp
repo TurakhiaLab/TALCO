@@ -20,7 +20,7 @@ int Talco_xdrop::Score (
     int score = 0;
     int ridx = ref_idx, qidx = query_idx;
     int m = 0,mm= 0,go=0,ge=0;
-    // printf ("aln: %d\n",aln.size());
+    // printf ("aln: %d %d %d\n",aln.size(), ref_idx, query_idx);
     for (int i = aln.size() - 1; i >= 0; i--){
         int8_t state = aln[i];	
         // printf ("state %d, ri %d, qi %d", state, ridx, qidx);
@@ -76,7 +76,7 @@ void Talco_xdrop::Align (
         for (size_t n = 0; n < num_alignments; n++) {
         
             std::vector<int8_t> aln;
-            int8_t state;
+            int8_t state = 0;
             int score;
             // std::cout << reference[n] << " " << query[n] << " " << std::endl;
 
@@ -88,7 +88,8 @@ void Talco_xdrop::Align (
             int tile = 0;
             while (!last_tile) {
                 std::vector<int8_t> tile_aln;
-                Talco_xdrop::Tile(reference[n], query[n], params, reference_idx, query_idx, tile_aln, state, last_tile);
+                // std::cout << "TIle: " << tile << " state:" << (state&&0xFF) << std::endl;
+                Talco_xdrop::Tile(reference[n], query[n], params, reference_idx, query_idx, tile_aln, state, last_tile, tile);
                 for (int i= tile_aln.size()-1; i>=0; i--){
                     if (i == tile_aln.size()-1 && tile>0){
                         continue;
@@ -96,12 +97,18 @@ void Talco_xdrop::Align (
                     aln.push_back(tile_aln[i]);
                 }
                 tile_aln.clear();
-                if (DEBUG) printf("Tile: %d, (r,q) = (%d,%d)\n",tile++, reference_idx, query_idx);
+                // printf("Tile: %d, (r,q) = (%d,%d)\n",tile, reference_idx, query_idx);
+                tile++;
+                if (tile == 15)
+                {
+                    // break;
+                }
             }
             score = Score(params, aln, reference[n], query[n], reference_idx, query_idx);
             
 
             printf("Alignment (Length, Score): (%d, %d)\n ", aln.size(), score);
+            // break;
 
         }
         
@@ -128,39 +135,72 @@ void Talco_xdrop::Traceback(
     const int16_t tb_start_ftr,
     const int8_t tb_state,
     const int16_t tb_start_idx,
+    const int16_t ref_start_idx,
     const std::vector<int8_t> &tb,
     std::vector<int8_t> &aln
 ){
     int32_t addr = tb_start_addr; 
     int16_t ftr = tb_start_ftr;
     int16_t idx = tb_start_idx;
+    int16_t query_idx = tb_start_idx;
+    int16_t ref_idx = ref_start_idx;
     int8_t  state = tb_state;
     int8_t  tb_value = 0;
 
+    int8_t  dir = 0;
+    bool checkpoint = false;
+    // int count = 0;
     while (ftr >= 0) {
         if (addr < 0) {
             fprintf(stderr, "ERROR: tb addr < 0!\n");
-            exit(1);
+            // exit(1);
         }
-        
+        // count++;
         
         tb_value = tb[addr];
-        if (DEBUG) {
+        if (DEBUG)
+        {
             std::cout << "Start Addr:" << addr << " state: " << (state & 0xFFFF) << " ,ftr: " << ftr << " ,idx: " << idx << " ,ll[ftr-1]: " <<  ftr_lower_limit[ftr];
             std::cout << " fL[ftr - 1]: " << ftr_length[ftr - 1] << " ,ll[ftr-2]: " <<  ftr_lower_limit[ftr-2];
             std::cout << " fL[ftr - 2]: " << ftr_length[ftr - 2];
             std::cout << " Tb: " << ( tb_value&0xFFFF);
         }
+
         
         if (state == 0) { // Current State M
             state = tb_value & 0x03;
+            if (state == 0)
+            {
+                dir = 0;
+            }
+            else if (state == 1)
+            {
+                dir = 1;
+                if (tb_value & 0x04) {
+                    state = 1;
+                } else {
+                    state = 0;
+                }   
+            }
+            else
+            {
+                dir = 2;
+                if (tb_value & 0x08) {
+                    state = 2;
+                } else {
+                    state = 0;
+            }
+            }
+
         } else if (state == 1) { // Current State I
+            dir = 1;
             if (tb_value & 0x04) {
                 state = 1;
             } else {
                 state = 0;
             }
         } else { // Current State D
+            dir = 2;
             if (tb_value & 0x08) {
                 state = 2;
             } else {
@@ -169,22 +209,55 @@ void Talco_xdrop::Traceback(
         }
 
         addr = addr - (idx  - ftr_lower_limit[ftr] + 1) - (ftr_length[ftr - 1]);
-        if (state == 0){
+        if (dir == 0){
             addr = addr - (ftr_length[ftr - 2]) + (idx - ftr_lower_limit[ftr  - 2]);
             ftr -= 2;
             idx -= 1;
-        }else if (state == 1){
+            query_idx--;
+            ref_idx--;
+        }else if (dir == 1){
             addr = addr + (idx - ftr_lower_limit[ftr  - 1]);
             ftr -= 1;
             idx -=1;
+            query_idx--;
         }else{
             addr = addr + (idx - ftr_lower_limit[ftr  - 1] + 1);
             ftr -= 1;
+            ref_idx--;
         }
 
-        aln.push_back(state);
-        if (DEBUG) std::cout << " Final State: " << (state&0xFF) << " End Addr: " << addr << std::endl;
+        // if (ref_idx==0 && query_idx==0)
+        // {
+        //     checkpoint = true;
+        // }
+
+        aln.push_back(dir);   
+        // state = next_state;
+        // if (DEBUG)  std::cout << " Final State: " << (state&0xFF) << " End Addr: " << addr << " index:" << ref_idx << ", " << query_idx << std::endl;
     }
+    // std::cout << count << std::endl;   
+
+    if (DEBUG) std::cout << ref_idx << " " << query_idx << std::endl; 
+
+    // if (!checkpoint)
+    // {
+
+    //     while (ref_idx != -1)
+    //     {
+    //         state = 2;
+    //         aln.push_back(state);
+    //         ref_idx--;
+    //         std::cout << "Here";
+    //     }
+    //     while (query_idx != -1)
+    //     {
+    //         state = 1;
+    //         aln.push_back(state);
+    //         query_idx--;
+    //         std::cout << "Here";
+    //     }
+    // }
+
 }
 
 void Talco_xdrop::Tile (
@@ -195,7 +268,8 @@ void Talco_xdrop::Tile (
     int32_t &query_idx,
     std::vector<int8_t> &aln,
     int8_t &state,
-    bool &last_tile 
+    bool &last_tile,
+    const int &tile
     ) {
         
         // Initialising variables
@@ -250,15 +324,15 @@ void Talco_xdrop::Tile (
             }
         }
 
+
         if ((reference_length < 0) || (query_length < 0)) {
             std::cout << reference_length << " " << query_length << std::endl;
             fprintf(stderr, "ERROR: Reference/Query index exceeded limit!\n");
             exit(1); 
         }
 
-        // printf("r,q length: %d,%d", reference_length, query_length);
         for (int32_t k = 0; k < reference_length + query_length - 1; k++){
-                    // printf("k: %d\n", k);
+            // printf("k: %d\n", k);
             if (L[k%3] >= U[k%3]+1) { // No more cells to compute based on x-drop critieria
                 std::cout << "No more cells to compute based on x-drop critieria" << std::endl;
                 break;
@@ -287,48 +361,81 @@ void Talco_xdrop::Tile (
 
                 int32_t match = -inf, insOp = -inf, delOp = -inf, insExt = -inf, delExt = -inf;
                 int32_t offset = i-L[k%3];
-                int32_t offsetDiag = L[k%3]-L[(k+1)%3]+offset-1;
+                int32_t offsetDiag = L[k%3]-L[(k+1)%3]+offset-1; // L[0] - L[1] + 0 - 1
                 int32_t offsetUp = L[k%3]-L[(k+2)%3]+offset;
                 int32_t offsetLeft = L[k%3]-L[(k+2)%3]+offset-1;
 
                 
-
+                int score_from_prev_tile = 0;
                 if ((k==0) || ((offsetDiag >= 0) && (offsetDiag <= U[(k+1)%3]-L[(k+1)%3]))) {
+                    if (k==0 && tile>0)
+                    {
+                        score_from_prev_tile = tile*10;
+                    }
                     if (reference[reference_idx+j] == query[query_idx+i]) {
-                        match = S[(k+1)%3][offsetDiag] + params.match;
+                        match = S[(k+1)%3][offsetDiag] + params.match + score_from_prev_tile; 
                     }
                     else {
-                        match = S[(k+1)%3][offsetDiag] + params.mismatch;
+                        match = S[(k+1)%3][offsetDiag] + params.mismatch + score_from_prev_tile;
                     }
+                    // if (k == 0)
+                    //     S[(k)%3][0] = match;
                 }
+
+                
 
                 if ((offsetUp >= 0) && (offsetUp <= U[(k+2)%3]-L[(k+2)%3])) {
                     delOp = S[(k+2)%3][offsetUp] + params.gapOpen;
+                    // if (k==1 && tile>0 && state==2)
+                    // {
+                    //     D[(k+1)%2][offsetUp] = val;
+                    // }
                     delExt = D[(k+1)%2][offsetUp] + params.gapExtend;
                 }
-                
+
                 if ((offsetLeft >= 0) && (offsetLeft <= U[(k+2)%3]-L[(k+2)%3])) {
                     insOp = S[(k+2)%3][offsetLeft] + params.gapOpen;
+                    // if (k==1 && tile>0 && state==1)
+                    // {
+                    //     I[(k+1)%2][offsetLeft] = val;
+                    // }
                     insExt = I[(k+1)%2][offsetLeft] + params.gapExtend;
+                   
                 }
 
-                I[k%2][offset] = insOp;
-                D[k%2][offset] = delOp;
+                // if (k ==0 && tile > 0)
+                // {
+                //     if (state == 1)
+                //     {
+                //         insExt = 10;
+                //         val = 10;
+                //     }
+                //     else if (state == 2)
+                //     {
+                //         delExt = 10;
+                //         val = 10;
+                //     }
+                // }
+
+                
+
+
+                I[k%2][offset] =  insOp;
+                D[k%2][offset] =  delOp;
                 Iptr = false;
                 Dptr = false;
 
-
-                if (insExt > insOp) {
+                if (insExt >= insOp) {
                     I[k%2][offset] = insExt;
                     Iptr = true;
                 }
-                if (delExt > delOp) {
+                if (delExt >= delOp) {
                     D[k%2][offset] = delExt;
                     Dptr = true;
                 }
 
-                if (match >= I[k%2][offset]) {
-                    if (match >= D[k%2][offset]) {
+                if (match > I[k%2][offset]) {
+                    if (match > D[k%2][offset]) {
                         S[k%3][offset] = match;
                         ptr = 0;
                     }
@@ -337,7 +444,7 @@ void Talco_xdrop::Tile (
                         ptr = 2;
                     }
                 }
-                else if (I[k%2][offset] >= D[k%2][offset]) {
+                else if (I[k%2][offset] > D[k%2][offset]) {
                     S[k%3][offset] = I[k%2][offset];
                     ptr = 1;
                 }
@@ -346,6 +453,11 @@ void Talco_xdrop::Tile (
                     ptr = 2;
                 }
                 
+                // if (tile > 0)
+                // {
+                //     if (i==0)
+                // }
+
 
                 if (S[k%3][offset] < max_score-params.xdrop) {
                     S[k%3][offset] = -inf;
@@ -364,7 +476,7 @@ void Talco_xdrop::Tile (
                 }
 
                 if (k == params.marker - 1) { // Convergence algorithm
-                    CS[k%3][offset] = (3 << 16) + (i & 0xFFFF); 
+                    CS[k%3][offset] = (3 << 16) | (i & 0xFFFF); 
                     if(DEBUG) std::cout << "Convergence Unique Id's: " <<  CS[k%3][offset] << "\n";
                 } else if (k == params.marker) {
                     CS[k%3][offset] = (0 << 16) | (i & 0xFFFF);  // to extract value use (CS[k%3][offset] & 0xFFFF)
@@ -393,6 +505,10 @@ void Talco_xdrop::Tile (
                         CS[k%3][offset] = CD[k%2][offset];
                     } 
                 }
+                // if (k < 5)
+                // {
+                //     std::cout << "Index: " << i << ", " << j << " Ins:" << insOp << ", " << insExt << " match:"<< match << " Del:" << delOp << ", " << delExt << " " << S[(k+2)%3][offsetUp] << " ptr:" << (ptr&0xFFFF) << " " << Iptr<< std::endl;
+                // }
                 if (Iptr) {
                     // std::cout << (ptr & 0xFF) << " ";
                     ptr |= 0x04; 
@@ -407,7 +523,7 @@ void Talco_xdrop::Tile (
                     tb.push_back(ptr);
                     // std::cout << (ptr & 0xFFFF) << " ";
                 }
-                // std:: cout << CS[k%3][offset] << " ";
+
             }
             // std::cout << "\n";
 
@@ -502,7 +618,7 @@ void Talco_xdrop::Tile (
         // std::cout <<  "Ref idx: " << reference_idx << " \nQuery idx: " << query_idx << std::endl;
         if (DEBUG) std::cout <<  "tb_start_addr: " << tb_start_addr << " \ntb_start_ftr: " << tb_start_ftr << std::endl;
 
-        Traceback(ftr_length, ftr_lower_limit, tb_start_addr, tb_start_ftr, (tb_state%3), conv_query_idx, tb, aln);
+        Traceback(ftr_length, ftr_lower_limit, tb_start_addr, tb_start_ftr, (tb_state%3), conv_query_idx, conv_ref_idx, tb, aln);
         state = tb_state%3;
         if (DEBUG) {
             std::cout << "tb_state: " <<  (tb_state & 0xFFFF) << std::endl;
