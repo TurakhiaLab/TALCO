@@ -1,0 +1,3 @@
+[submodule "software/baselines/edlib"]
+	path = software/baselines/edlib
+	url = https://github.com/Martinsos/edlib.git
