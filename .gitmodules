@@ -4,3 +4,6 @@
 [submodule "software/baselines/libgaba"]
 	path = software/baselines/libgaba
 	url = https://github.com/ocxtal/libgaba.git
+[submodule "software/baselines/WFA2-lib"]
+	path = software/baselines/WFA2-lib
+	url = https://github.com/smarco/WFA2-lib.git
