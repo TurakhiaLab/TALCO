@@ -1,3 +1,6 @@
 [submodule "software/baselines/edlib"]
 	path = software/baselines/edlib
 	url = https://github.com/Martinsos/edlib.git
+[submodule "software/baselines/libgaba"]
+	path = software/baselines/libgaba
+	url = https://github.com/ocxtal/libgaba.git
