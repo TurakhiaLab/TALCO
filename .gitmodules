@@ -7,3 +7,6 @@
 [submodule "software/baselines/WFA2-lib"]
 	path = software/baselines/WFA2-lib
 	url = https://github.com/smarco/WFA2-lib.git
+[submodule "software/baselines/Scrooge"]
+	path = software/baselines/Scrooge
+	url = https://github.com/CMU-SAFARI/Scrooge.git
