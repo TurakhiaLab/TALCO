@@ -19,3 +19,14 @@ cd scripts
 source build_baseline.sh make
 cd ..
 ```
+
+#### Memory Usage and Energy Consumption Analysis
+* Setup dataset
+```
+cd scripts
+source setup_dataset.sh
+```
+* Run TALCO-XDrop, TALCO-WFAA, and baseline tools
+```
+source run_cpu_baseline.sh
+```
