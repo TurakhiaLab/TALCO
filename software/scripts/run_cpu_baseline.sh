@@ -77,3 +77,6 @@ do
         done
     done
 done
+
+rm $TEMP_FILE
+cd $CURR_DIR
