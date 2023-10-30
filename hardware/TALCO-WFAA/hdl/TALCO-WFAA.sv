@@ -1,4 +1,4 @@
-module PEArray #(
+module TALCO_WFAA #(
     parameter NUM_EXTEND = 16,
     parameter MAX_WAVEFRONT_LEN = 64,
 	parameter LOG_MAX_WAVEFRONT_LEN = 8,
@@ -26,7 +26,7 @@ module PEArray #(
 	input logic [REF_LEN_WIDTH - 1: 0] refLen,
     input logic [QUERY_LEN_WIDTH - 1: 0] queryLen,
 	input logic [LOG_MAX_WAVEFRONT_LEN - 1: 0] marker,
-	
+	output logic [1:0] compact_cigar [MAX_WAVEFRONT_LEN-1:0],
 	output logic stop
 );
 
@@ -143,7 +143,7 @@ module PEArray #(
 	logic [ADDR_WIDTH-1:0] Kmin_addr;
 	logic [ADDR_WIDTH-1:0] width_addr;
 	logic stop_traceback;
-	logic [1:0] compact_cigar [MAX_WAVEFRONT_LEN-1:0];
+	
 	logic [LOG_MAX_WAVEFRONT_LEN -1:0] num_compact;
 	logic [3:0] countExtend;
 	
