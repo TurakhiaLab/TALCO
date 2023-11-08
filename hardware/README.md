@@ -20,16 +20,22 @@ source install_dependecies.sh
 ```
 
 #### 3. ASIC Analysis
-1. Use the following commands to generate Area, Power, and Max-delay of the designs using OpenROAD:
+1. Use the following commands to generate Area, Power, and Max-delay of the designs using [OpenROAD-flow-scripts](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/tree/master):
 ```
 cd scripts
 source ASIC_analysis.sh [XDrop/WFAA]
 ```
 
-2. SRAM Power analysis using OpenRAM
+2. SRAM Power analysis using [OpenRAM](https://github.com/VLSIDA/OpenRAM/tree/stable)
 ```
 cd scripts
 source SRAM_analysis.sh
+```
+
+3. DRAM Power and Cycle count analysis using [DRAMPower](https://github.com/tukl-msd/DRAMPower)
+```
+cd scripts
+source DRAM_analysis.sh
 ```
 
 ## Building on AWS EC2 F1 instace

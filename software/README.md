@@ -3,10 +3,10 @@
 #### System Requirements
 1. **gcc:** At least support for `C++ 17` and OpenMP, tested with `g++ 10.3`
 2. **cmake:** `3.16.3`
-3. Docker
+3. **Docker**
 
 #### 1. Use Pre-built Docker image 
-We have provided a pre-built docker image with all necessary tools installed in it for baseline evaluation. 
+We provide a pre-built docker image with all necessary tools installed in it for baseline evaluation. 
 ```
 docker run -it swalia14/talco:latest
 # Inside Docker
