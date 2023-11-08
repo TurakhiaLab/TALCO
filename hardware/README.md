@@ -20,12 +20,16 @@ source install_dependecies.sh
 ```
 
 #### 3. ASIC Analysis
-Following commands will mount necessary files to the OpenROAD docker instance and generate area, power, and worst-case-delay of the designs.
+1. Use the following commands to generate Area, Power, and Max-delay of the designs using OpenROAD:
 ```
 cd scripts
 source ASIC_analysis.sh [XDrop/WFAA]
-cd flow
-make
+```
+
+2. SRAM Power analysis using OpenRAM
+```
+cd scripts
+source SRAM_analysis.sh
 ```
 
 ## Building on AWS EC2 F1 instace
