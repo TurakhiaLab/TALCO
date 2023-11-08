@@ -3,10 +3,21 @@
 #### System Requirements
 1. **gcc:** At least support for `C++ 17` and OpenMP, tested with `g++ 10.3`
 2. **cmake:** `3.16.3`
+3. Docker
+
+#### 1. Use Pre-built Docker image 
+We have provided a pre-built docker image with all necessary tools installed in it for baseline evaluation. 
+```
+docker run -it swalia14/talco:latest
+# Inside Docker
+cd /
+git clone https://github.com/TurakhiaLab/TALCO.git
+cd TALCO/software
+```
 
 #### Install Dependencies
 ```
-sudo ./install_dependencies.sh
+./install_dependencies.sh
 ```
 
 #### TALCO-XDrop and TALCO-WFAA
@@ -33,5 +44,5 @@ source setup_dataset.sh
 ```
 * Run TALCO-XDrop, TALCO-WFAA, and baseline tools
 ``` 
-sudo ./analysis.sh
+./analysis.sh
 ```
