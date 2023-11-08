@@ -14,7 +14,14 @@ This repository contains CPU and ASIC implementations of TALCO-XDrop and TALCO-W
 .
 └── 1. dataset
 └── 2. hardware # ASIC implementations
+	└── TALCO-XDrop
+	└── TALCO-WFAA
+	└── scripts
 └── 3. software # CPU implementations
+	└── TALCO-XDrop
+	└── TALCO-WFAA
+	└── scripts
+	└── baselines
 ```
 
 ## **Citing TALCO**
