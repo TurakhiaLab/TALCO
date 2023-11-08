@@ -1,7 +1,7 @@
 CC = gcc
 ARCHFLAGS_GABA = -march=native
 BIT = 4
-CFLAGS_GABA = -O3 -Wall -Wno-unused-function -Wno-unused-label -std=c99 -pipe -DBIT=$(BIT)
+CFLAGS_GABA = -O3 -Wall -Wno-unused-function -Wno-unused-label -std=c99 -pipe -DBIT=$(BIT) -fopenmp
 LIBGABA_FDR=../libgaba
 LIBGABA_LIB=../libgaba/libgaba.a
 
