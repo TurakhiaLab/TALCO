@@ -81,9 +81,8 @@ int main(int argc, char *argv[]){
         std::getline(qf, q);
         ref.push_back(r);
         query.push_back(q);
-	break;
     }
-    cout << "edit_distance" << endl;
+    // cout << "edit_distance" << endl;
     cpu_pairwise(ref, query);
     //cpu_string_pairs_example();
     //cpu_mapping_example();
