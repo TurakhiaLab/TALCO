@@ -4,6 +4,11 @@
 1. **gcc:** At least support for `C++ 17` and OpenMP, tested with `g++ 10.3`
 2. **cmake:** `3.16.3`
 
+#### Install Dependencies
+```
+sudo ./install_dependencies.sh
+```
+
 #### TALCO-XDrop and TALCO-WFAA
 Visit [TALCO-XDrop](TALCO-XDrop/) and [TALCO-WFAA](TALCO-WFAA/) for implementation and usage. Use the following commands to build TALCO-XDrop and TALCO-WFAA.
 ```
@@ -27,6 +32,6 @@ cd scripts
 source setup_dataset.sh
 ```
 * Run TALCO-XDrop, TALCO-WFAA, and baseline tools
-```
-source run_cpu_baseline.sh
+``` 
+sudo ./analysis.sh
 ```
