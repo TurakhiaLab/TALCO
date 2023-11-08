@@ -34,7 +34,10 @@ then
     cd "$baseline_dir/Scrooge"
     make &>> $trash_file
 
-    rm $trash_file
+    cd $baseline_dir/common
+    make &>> $trash_file
+
+    rm -f $trash_file
 
 elif [[ $in == "clean" ]] 
 then
@@ -65,7 +68,7 @@ then
     cd "$baseline_dir/Scrooge"
     make clean &>> $trash_file
 
-    rm $trash_file
+    rm -f $trash_file
 
 else
     echo "make or clean? Usage: source $0 [make or clean]"

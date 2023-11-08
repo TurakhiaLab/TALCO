@@ -25,7 +25,7 @@ then
     cmake .. &>> $trash_file 
     make &>> $trash_file
 
-    rm $trash_file
+    rm -f $trash_file
 
 
 elif [[ $in == "clean" ]] 
@@ -40,7 +40,7 @@ then
     cd $TALCO_WFAA_DIR/build
     make clean &>> $trash_file
 
-    rm $trash_file
+    rm -f $trash_file
 
 
 else

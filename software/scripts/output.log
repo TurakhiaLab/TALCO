@@ -1,0 +1,1514 @@
+/home/swalia@AD.UCSD.EDU/work/TALCO/software/scripts/../baselines/common/scrooge_cpu /home/swalia@AD.UCSD.EDU/work/TALCO/software/scripts/../dataset/dataset_10k/ont/0.99/ont_ref.fa /home/swalia@AD.UCSD.EDU/work/TALCO/software/scripts/../dataset/dataset_10k/ont/0.99/ont_query.fa
+
+
+--------------------------------------------------------------------------------
+
+
+Preparing data...
+Starting genasm_kernel...
+core algorithm ran at 4081 aligns/second
+post-processing results...
+pairs=1001 alignments=501
+400
+ 
+score: affine - 1: 19144
+591
+ 
+score: affine - 1: 18737
+0
+ 
+score: affine - 1: 20000
+371
+ 
+score: affine - 1: 19230
+311
+ 
+score: affine - 1: 19336
+425
+ 
+score: affine - 1: 19071
+0
+ 
+score: affine - 1: 20000
+599
+ 
+score: affine - 1: 18704
+628
+ 
+score: affine - 1: 18637
+471
+ 
+score: affine - 1: 19029
+299
+ 
+score: affine - 1: 19373
+0
+ 
+score: affine - 1: 20000
+0
+ 
+score: affine - 1: 20000
+387
+ 
+score: affine - 1: 19181
+205
+ 
+score: affine - 1: 19566
+0
+ 
+score: affine - 1: 20000
+613
+ 
+score: affine - 1: 18686
+0
+ 
+score: affine - 1: 20000
+873
+ 
+score: affine - 1: 18144
+0
+ 
+score: affine - 1: 20000
+194
+ 
+score: affine - 1: 19595
+802
+ 
+score: affine - 1: 18289
+382
+ 
+score: affine - 1: 19199
+684
+ 
+score: affine - 1: 18549
+87
+ 
+score: affine - 1: 19831
+97
+ 
+score: affine - 1: 19799
+98
+ 
+score: affine - 1: 19795
+927
+ 
+score: affine - 1: 18018
+287
+ 
+score: affine - 1: 19406
+567
+ 
+score: affine - 1: 18808
+183
+ 
+score: affine - 1: 19630
+0
+ 
+score: affine - 1: 20000
+585
+ 
+score: affine - 1: 18757
+179
+ 
+score: affine - 1: 19646
+185
+ 
+score: affine - 1: 19628
+291
+ 
+score: affine - 1: 19388
+102
+ 
+score: affine - 1: 19785
+190
+ 
+score: affine - 1: 19608
+773
+ 
+score: affine - 1: 18346
+214
+ 
+score: affine - 1: 19534
+392
+ 
+score: affine - 1: 19162
+102
+ 
+score: affine - 1: 19784
+671
+ 
+score: affine - 1: 18555
+557
+ 
+score: affine - 1: 18813
+567
+ 
+score: affine - 1: 18806
+898
+ 
+score: affine - 1: 18058
+103
+ 
+score: affine - 1: 19783
+0
+ 
+score: affine - 1: 20000
+0
+ 
+score: affine - 1: 20000
+169
+ 
+score: affine - 1: 19671
+0
+ 
+score: affine - 1: 20000
+292
+ 
+score: affine - 1: 19390
+99
+ 
+score: affine - 1: 19791
+194
+ 
+score: affine - 1: 19593
+91
+ 
+score: affine - 1: 19819
+101
+ 
+score: affine - 1: 19789
+755
+ 
+score: affine - 1: 18389
+183
+ 
+score: affine - 1: 19630
+548
+ 
+score: affine - 1: 18867
+106
+ 
+score: affine - 1: 19774
+384
+ 
+score: affine - 1: 19202
+0
+ 
+score: affine - 1: 20000
+609
+ 
+score: affine - 1: 18681
+943
+ 
+score: affine - 1: 17990
+0
+ 
+score: affine - 1: 20000
+668
+ 
+score: affine - 1: 18560
+0
+ 
+score: affine - 1: 20000
+579
+ 
+score: affine - 1: 18774
+207
+ 
+score: affine - 1: 19555
+928
+ 
+score: affine - 1: 17950
+0
+ 
+score: affine - 1: 20000
+491
+ 
+score: affine - 1: 18940
+1173
+ 
+score: affine - 1: 17453
+287
+ 
+score: affine - 1: 19404
+1024
+ 
+score: affine - 1: 17839
+0
+ 
+score: affine - 1: 20000
+86
+ 
+score: affine - 1: 19834
+747
+ 
+score: affine - 1: 18391
+494
+ 
+score: affine - 1: 18943
+0
+ 
+score: affine - 1: 20000
+859
+ 
+score: affine - 1: 18184
+0
+ 
+score: affine - 1: 20000
+275
+ 
+score: affine - 1: 19440
+98
+ 
+score: affine - 1: 19795
+0
+ 
+score: affine - 1: 20000
+109
+ 
+score: affine - 1: 19765
+391
+ 
+score: affine - 1: 19170
+277
+ 
+score: affine - 1: 19427
+1867
+ 
+score: affine - 1: 15995
+608
+ 
+score: affine - 1: 18670
+466
+ 
+score: affine - 1: 19029
+97
+ 
+score: affine - 1: 19801
+0
+ 
+score: affine - 1: 20000
+484
+ 
+score: affine - 1: 18969
+0
+ 
+score: affine - 1: 20000
+459
+ 
+score: affine - 1: 19049
+205
+ 
+score: affine - 1: 19557
+100
+ 
+score: affine - 1: 19792
+283
+ 
+score: affine - 1: 19415
+294
+ 
+score: affine - 1: 19387
+472
+ 
+score: affine - 1: 19013
+556
+ 
+score: affine - 1: 18837
+0
+ 
+score: affine - 1: 20000
+106
+ 
+score: affine - 1: 19772
+385
+ 
+score: affine - 1: 19196
+0
+ 
+score: affine - 1: 20000
+556
+ 
+score: affine - 1: 18837
+275
+ 
+score: affine - 1: 19443
+0
+ 
+score: affine - 1: 20000
+106
+ 
+score: affine - 1: 19774
+87
+ 
+score: affine - 1: 19831
+0
+ 
+score: affine - 1: 20000
+395
+ 
+score: affine - 1: 19159
+0
+ 
+score: affine - 1: 20000
+929
+ 
+score: affine - 1: 18041
+462
+ 
+score: affine - 1: 19027
+98
+ 
+score: affine - 1: 19796
+609
+ 
+score: affine - 1: 18624
+496
+ 
+score: affine - 1: 18946
+298
+ 
+score: affine - 1: 19375
+0
+ 
+score: affine - 1: 20000
+389
+ 
+score: affine - 1: 19181
+664
+ 
+score: affine - 1: 18579
+94
+ 
+score: affine - 1: 19809
+0
+ 
+score: affine - 1: 20000
+92
+ 
+score: affine - 1: 19814
+0
+ 
+score: affine - 1: 20000
+489
+ 
+score: affine - 1: 18968
+0
+ 
+score: affine - 1: 20000
+567
+ 
+score: affine - 1: 18795
+219
+ 
+score: affine - 1: 19524
+469
+ 
+score: affine - 1: 19016
+101
+ 
+score: affine - 1: 19787
+292
+ 
+score: affine - 1: 19386
+0
+ 
+score: affine - 1: 20000
+283
+ 
+score: affine - 1: 19412
+96
+ 
+score: affine - 1: 19805
+183
+ 
+score: affine - 1: 19633
+849
+ 
+score: affine - 1: 18109
+0
+ 
+score: affine - 1: 20000
+0
+ 
+score: affine - 1: 20000
+563
+ 
+score: affine - 1: 18797
+91
+ 
+score: affine - 1: 19819
+0
+ 
+score: affine - 1: 20000
+601
+ 
+score: affine - 1: 18684
+92
+ 
+score: affine - 1: 19816
+99
+ 
+score: affine - 1: 19795
+673
+ 
+score: affine - 1: 18535
+91
+ 
+score: affine - 1: 19819
+0
+ 
+score: affine - 1: 20000
+0
+ 
+score: affine - 1: 20000
+386
+ 
+score: affine - 1: 19181
+461
+ 
+score: affine - 1: 19045
+106
+ 
+score: affine - 1: 19773
+467
+ 
+score: affine - 1: 19027
+102
+ 
+score: affine - 1: 19785
+370
+ 
+score: affine - 1: 19244
+1051
+ 
+score: affine - 1: 17704
+593
+ 
+score: affine - 1: 18723
+106
+ 
+score: affine - 1: 19771
+872
+ 
+score: affine - 1: 18130
+101
+ 
+score: affine - 1: 19789
+318
+ 
+score: affine - 1: 19302
+473
+ 
+score: affine - 1: 19013
+286
+ 
+score: affine - 1: 19405
+96
+ 
+score: affine - 1: 19803
+466
+ 
+score: affine - 1: 19034
+1410
+ 
+score: affine - 1: 16998
+616
+ 
+score: affine - 1: 18655
+486
+ 
+score: affine - 1: 18972
+318
+ 
+score: affine - 1: 19312
+85
+ 
+score: affine - 1: 19836
+411
+ 
+score: affine - 1: 19121
+1345
+ 
+score: affine - 1: 17090
+84
+ 
+score: affine - 1: 19835
+186
+ 
+score: affine - 1: 19625
+478
+ 
+score: affine - 1: 18986
+824
+ 
+score: affine - 1: 18221
+677
+ 
+score: affine - 1: 18539
+936
+ 
+score: affine - 1: 17930
+588
+ 
+score: affine - 1: 18746
+106
+ 
+score: affine - 1: 19772
+278
+ 
+score: affine - 1: 19431
+0
+ 
+score: affine - 1: 20000
+110
+ 
+score: affine - 1: 19760
+176
+ 
+score: affine - 1: 19650
+0
+ 
+score: affine - 1: 20000
+102
+ 
+score: affine - 1: 19786
+278
+ 
+score: affine - 1: 19430
+395
+ 
+score: affine - 1: 19163
+288
+ 
+score: affine - 1: 19394
+83
+ 
+score: affine - 1: 19836
+402
+ 
+score: affine - 1: 19137
+294
+ 
+score: affine - 1: 19382
+866
+ 
+score: affine - 1: 18074
+0
+ 
+score: affine - 1: 20000
+213
+ 
+score: affine - 1: 19545
+0
+ 
+score: affine - 1: 20000
+1003
+ 
+score: affine - 1: 17850
+98
+ 
+score: affine - 1: 19798
+493
+ 
+score: affine - 1: 18940
+0
+ 
+score: affine - 1: 20000
+101
+ 
+score: affine - 1: 19787
+0
+ 
+score: affine - 1: 20000
+384
+ 
+score: affine - 1: 19197
+0
+ 
+score: affine - 1: 20000
+0
+ 
+score: affine - 1: 20000
+99
+ 
+score: affine - 1: 19793
+89
+ 
+score: affine - 1: 19823
+391
+ 
+score: affine - 1: 19171
+295
+ 
+score: affine - 1: 19381
+281
+ 
+score: affine - 1: 19415
+380
+ 
+score: affine - 1: 19202
+0
+ 
+score: affine - 1: 20000
+465
+ 
+score: affine - 1: 19051
+568
+ 
+score: affine - 1: 18789
+293
+ 
+score: affine - 1: 19393
+371
+ 
+score: affine - 1: 19220
+193
+ 
+score: affine - 1: 19589
+373
+ 
+score: affine - 1: 19225
+0
+ 
+score: affine - 1: 20000
+0
+ 
+score: affine - 1: 20000
+290
+ 
+score: affine - 1: 19391
+110
+ 
+score: affine - 1: 19754
+501
+ 
+score: affine - 1: 18944
+197
+ 
+score: affine - 1: 19586
+458
+ 
+score: affine - 1: 19052
+0
+ 
+score: affine - 1: 20000
+572
+ 
+score: affine - 1: 18795
+666
+ 
+score: affine - 1: 18576
+194
+ 
+score: affine - 1: 19596
+748
+ 
+score: affine - 1: 18372
+0
+ 
+score: affine - 1: 20000
+387
+ 
+score: affine - 1: 19176
+0
+ 
+score: affine - 1: 20000
+99
+ 
+score: affine - 1: 19795
+275
+ 
+score: affine - 1: 19439
+1186
+ 
+score: affine - 1: 17430
+478
+ 
+score: affine - 1: 18995
+1485
+ 
+score: affine - 1: 16808
+196
+ 
+score: affine - 1: 19594
+0
+ 
+score: affine - 1: 20000
+1039
+ 
+score: affine - 1: 17757
+88
+ 
+score: affine - 1: 19826
+287
+ 
+score: affine - 1: 19405
+176
+ 
+score: affine - 1: 19654
+620
+ 
+score: affine - 1: 18642
+626
+ 
+score: affine - 1: 18624
+478
+ 
+score: affine - 1: 18983
+0
+ 
+score: affine - 1: 20000
+774
+ 
+score: affine - 1: 18348
+478
+ 
+score: affine - 1: 18999
+203
+ 
+score: affine - 1: 19568
+0
+ 
+score: affine - 1: 20000
+569
+ 
+score: affine - 1: 18753
+618
+ 
+score: affine - 1: 18646
+96
+ 
+score: affine - 1: 19802
+99
+ 
+score: affine - 1: 19793
+108
+ 
+score: affine - 1: 19768
+464
+ 
+score: affine - 1: 19033
+651
+ 
+score: affine - 1: 18602
+685
+ 
+score: affine - 1: 18504
+1382
+ 
+score: affine - 1: 17058
+930
+ 
+score: affine - 1: 18021
+391
+ 
+score: affine - 1: 19167
+815
+ 
+score: affine - 1: 18233
+195
+ 
+score: affine - 1: 19589
+100
+ 
+score: affine - 1: 19788
+0
+ 
+score: affine - 1: 20000
+751
+ 
+score: affine - 1: 18376
+0
+ 
+score: affine - 1: 20000
+274
+ 
+score: affine - 1: 19437
+220
+ 
+score: affine - 1: 19519
+556
+ 
+score: affine - 1: 18845
+800
+ 
+score: affine - 1: 18273
+0
+ 
+score: affine - 1: 20000
+1465
+ 
+score: affine - 1: 16749
+0
+ 
+score: affine - 1: 20000
+87
+ 
+score: affine - 1: 19831
+188
+ 
+score: affine - 1: 19613
+0
+ 
+score: affine - 1: 20000
+105
+ 
+score: affine - 1: 19776
+0
+ 
+score: affine - 1: 20000
+212
+ 
+score: affine - 1: 19546
+97
+ 
+score: affine - 1: 19797
+89
+ 
+score: affine - 1: 19825
+96
+ 
+score: affine - 1: 19801
+478
+ 
+score: affine - 1: 18990
+686
+ 
+score: affine - 1: 18501
+297
+ 
+score: affine - 1: 19375
+287
+ 
+score: affine - 1: 19404
+1678
+ 
+score: affine - 1: 16346
+401
+ 
+score: affine - 1: 19162
+726
+ 
+score: affine - 1: 18432
+107
+ 
+score: affine - 1: 19771
+288
+ 
+score: affine - 1: 19405
+374
+ 
+score: affine - 1: 19233
+93
+ 
+score: affine - 1: 19811
+460
+ 
+score: affine - 1: 19052
+0
+ 
+score: affine - 1: 20000
+104
+ 
+score: affine - 1: 19775
+804
+ 
+score: affine - 1: 18257
+1215
+ 
+score: affine - 1: 17406
+0
+ 
+score: affine - 1: 20000
+1479
+ 
+score: affine - 1: 16811
+379
+ 
+score: affine - 1: 19217
+881
+ 
+score: affine - 1: 18069
+462
+ 
+score: affine - 1: 19047
+0
+ 
+score: affine - 1: 20000
+384
+ 
+score: affine - 1: 19203
+197
+ 
+score: affine - 1: 19583
+293
+ 
+score: affine - 1: 19387
+98
+ 
+score: affine - 1: 19798
+707
+ 
+score: affine - 1: 18431
+0
+ 
+score: affine - 1: 20000
+101
+ 
+score: affine - 1: 19789
+0
+ 
+score: affine - 1: 20000
+290
+ 
+score: affine - 1: 19391
+0
+ 
+score: affine - 1: 20000
+282
+ 
+score: affine - 1: 19430
+196
+ 
+score: affine - 1: 19592
+478
+ 
+score: affine - 1: 18998
+581
+ 
+score: affine - 1: 18756
+287
+ 
+score: affine - 1: 19397
+290
+ 
+score: affine - 1: 19389
+87
+ 
+score: affine - 1: 19827
+197
+ 
+score: affine - 1: 19587
+852
+ 
+score: affine - 1: 18131
+200
+ 
+score: affine - 1: 19577
+292
+ 
+score: affine - 1: 19388
+468
+ 
+score: affine - 1: 19036
+1098
+ 
+score: affine - 1: 17662
+97
+ 
+score: affine - 1: 19801
+0
+ 
+score: affine - 1: 20000
+183
+ 
+score: affine - 1: 19629
+184
+ 
+score: affine - 1: 19630
+1660
+ 
+score: affine - 1: 16402
+0
+ 
+score: affine - 1: 20000
+0
+ 
+score: affine - 1: 20000
+576
+ 
+score: affine - 1: 18757
+1302
+ 
+score: affine - 1: 17153
+0
+ 
+score: affine - 1: 20000
+400
+ 
+score: affine - 1: 19151
+299
+ 
+score: affine - 1: 19373
+560
+ 
+score: affine - 1: 18819
+298
+ 
+score: affine - 1: 19376
+97
+ 
+score: affine - 1: 19799
+481
+ 
+score: affine - 1: 18972
+4381
+ 
+score: affine - 1: 7146
+1350
+ 
+score: affine - 1: 17049
+385
+ 
+score: affine - 1: 19200
+389
+ 
+score: affine - 1: 19181
+0
+ 
+score: affine - 1: 20000
+191
+ 
+score: affine - 1: 19610
+565
+ 
+score: affine - 1: 18813
+322
+ 
+score: affine - 1: 19298
+289
+ 
+score: affine - 1: 19395
+0
+ 
+score: affine - 1: 20000
+193
+ 
+score: affine - 1: 19597
+509
+ 
+score: affine - 1: 18899
+0
+ 
+score: affine - 1: 20000
+0
+ 
+score: affine - 1: 20000
+573
+ 
+score: affine - 1: 18786
+826
+ 
+score: affine - 1: 18167
+105
+ 
+score: affine - 1: 19775
+182
+ 
+score: affine - 1: 19631
+0
+ 
+score: affine - 1: 20000
+102
+ 
+score: affine - 1: 19786
+0
+ 
+score: affine - 1: 20000
+103
+ 
+score: affine - 1: 19781
+99
+ 
+score: affine - 1: 19789
+94
+ 
+score: affine - 1: 19810
+299
+ 
+score: affine - 1: 19367
+183
+ 
+score: affine - 1: 19631
+0
+ 
+score: affine - 1: 20000
+1011
+ 
+score: affine - 1: 17848
+266
+ 
+score: affine - 1: 19463
+308
+ 
+score: affine - 1: 19341
+0
+ 
+score: affine - 1: 20000
+283
+ 
+score: affine - 1: 19418
+89
+ 
+score: affine - 1: 19825
+278
+ 
+score: affine - 1: 19419
+0
+ 
+score: affine - 1: 20000
+110
+ 
+score: affine - 1: 19762
+1027
+ 
+score: affine - 1: 17786
+287
+ 
+score: affine - 1: 19403
+568
+ 
+score: affine - 1: 18803
+576
+ 
+score: affine - 1: 18784
+488
+ 
+score: affine - 1: 18958
+479
+ 
+score: affine - 1: 18979
+491
+ 
+score: affine - 1: 18944
+104
+ 
+score: affine - 1: 19780
+188
+ 
+score: affine - 1: 19612
+102
+ 
+score: affine - 1: 19782
+0
+ 
+score: affine - 1: 20000
+94
+ 
+score: affine - 1: 19809
+0
+ 
+score: affine - 1: 20000
+0
+ 
+score: affine - 1: 20000
+184
+ 
+score: affine - 1: 19629
+866
+ 
+score: affine - 1: 18147
+0
+ 
+score: affine - 1: 20000
+96
+ 
+score: affine - 1: 19804
+0
+ 
+score: affine - 1: 20000
+1602
+ 
+score: affine - 1: 16469
+595
+ 
+score: affine - 1: 18733
+0
+ 
+score: affine - 1: 20000
+378
+ 
+score: affine - 1: 19220
+778
+ 
+score: affine - 1: 18269
+0
+ 
+score: affine - 1: 20000
+395
+ 
+score: affine - 1: 19153
+403
+ 
+score: affine - 1: 19141
+806
+ 
+score: affine - 1: 18234
+1184
+ 
+score: affine - 1: 17441
+101
+ 
+score: affine - 1: 19787
+723
+ 
+score: affine - 1: 18439
+192
+ 
+score: affine - 1: 19604
+0
+ 
+score: affine - 1: 20000
+277
+ 
+score: affine - 1: 19422
+102
+ 
+score: affine - 1: 19780
+817
+ 
+score: affine - 1: 18196
+0
+ 
+score: affine - 1: 20000
+0
+ 
+score: affine - 1: 20000
+400
+ 
+score: affine - 1: 19149
+574
+ 
+score: affine - 1: 18772
+80
+ 
+score: affine - 1: 19850
+201
+ 
+score: affine - 1: 19575
+566
+ 
+score: affine - 1: 18805
+115
+ 
+score: affine - 1: 19747
+213
+ 
+score: affine - 1: 19540
+0
+ 
+score: affine - 1: 20000
+504
+ 
+score: affine - 1: 18916
+0
+ 
+score: affine - 1: 20000
+0
+ 
+score: affine - 1: 20000
+0
+ 
+score: affine - 1: 20000
+405
+ 
+score: affine - 1: 19135
+0
+ 
+score: affine - 1: 20000
+405
+ 
+score: affine - 1: 19136
+0
+ 
+score: affine - 1: 20000
+302
+ 
+score: affine - 1: 19358
+577
+ 
+score: affine - 1: 18764
+211
+ 
+score: affine - 1: 19544
+419
+ 
+score: affine - 1: 19102
+0
+ 
+score: affine - 1: 20000
+362
+ 
+score: affine - 1: 19254
+0
+ 
+score: affine - 1: 20000
+103
+ 
+score: affine - 1: 19781
+214
+ 
+score: affine - 1: 19535
+380
+ 
+score: affine - 1: 19206
+579
+ 
+score: affine - 1: 18771
+596
+ 
+score: affine - 1: 18709
+682
+ 
+score: affine - 1: 18506
+665
+ 
+score: affine - 1: 18565
+848
+ 
+score: affine - 1: 18129
+567
+ 
+score: affine - 1: 18802
+0
+ 
+score: affine - 1: 20000
+89
+ 
+score: affine - 1: 19823
+101
+ 
+score: affine - 1: 19786
+394
+ 
+score: affine - 1: 19161
+105
+ 
+score: affine - 1: 19777
+88
+ 
+score: affine - 1: 19828
+374
+ 
+score: affine - 1: 19236
+0
+ 
+score: affine - 1: 20000
+262
+ 
+score: affine - 1: 19476
+0
+ 
+score: affine - 1: 20000
+0
+ 
+score: affine - 1: 20000
+653
+ 
+score: affine - 1: 18599
+0
+ 
+score: affine - 1: 20000
+272
+ 
+score: affine - 1: 19456
+289
+ 
+score: affine - 1: 19389
+401
+ 
+score: affine - 1: 19140
+318
+ 
+score: affine - 1: 19311
+201
+ 
+score: affine - 1: 19575
+556
+ 
+score: affine - 1: 18836
+1165
+ 
+score: affine - 1: 17515
+98
+ 
+score: affine - 1: 19798
+0
+ 
+score: affine - 1: 20000
+0
+ 
+score: affine - 1: 20000
+200
+ 
+score: affine - 1: 19577
+199
+ 
+score: affine - 1: 19587
+104
+ 
+score: affine - 1: 19780
+107
+ 
+score: affine - 1: 19770
+0
+ 
+score: affine - 1: 20000
+388
+ 
+score: affine - 1: 19183
+375
+ 
+score: affine - 1: 19216
+284
+ 
+score: affine - 1: 19416
+938
+ 
+score: affine - 1: 18015
+0
+ 
+score: affine - 1: 20000
+476
+ 
+score: affine - 1: 18980
+579
+ 
+score: affine - 1: 18757
+765
+ 
+score: affine - 1: 18319
+917
+ 
+score: affine - 1: 18067
+297
+ 
+score: affine - 1: 19368
+198
+ 
+score: affine - 1: 19586
+100
+ 
+score: affine - 1: 19792
+1032
+ 
+score: affine - 1: 17795
+308
+ 
+score: affine - 1: 19338
+0
+ 
+score: affine - 1: 20000
+951
+ 
+score: affine - 1: 17940
+1042
+ 
+score: affine - 1: 17744
+182
+ 
+score: affine - 1: 19636
+102
+ 
+score: affine - 1: 19784
