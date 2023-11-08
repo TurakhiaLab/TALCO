@@ -1,18 +1,24 @@
 #!/bin/bash
 
 CURR_DIR="$PWD"
-BASELINE_DIR="$CURR_DIR/../baselines"
+BASELINE_DIR="$CURR_DIR/.."
 
-edlib=edlib/build/bin/edlib-aligner
-wadapt=common/wadapt
-biwfa=BiWFA-paper/bin/biwfa
-scrooge=common/scrooge_cpu
+edlib=baselines/edlib/build/bin/edlib-aligner
+wadapt=baselines/common/wadapt
+biwfa=baselines/BiWFA-paper/bin/biwfa
+scrooge=baselines/common/scrooge_cpu
+
+talco_xdrop=TALCO-XDrop/build/TALCO-XDrop
+talco_wfaa=TALCO-WFAA/build/TALCO-WFAA
+
 
 tools=""
 tools+="$edlib "
 tools+="$wadapt "
 # tools+="biwfa "
 tools+="$scrooge "
+tools+="$talco_xdrop "
+tools+="$talco_wfaa "
 
 DATASET_DIR="$CURR_DIR/../dataset"
 TEMP_FILE="$CURR_DIR/temp"
@@ -80,7 +86,19 @@ do
             for tool in $tools
             do 
                 file_path=$DATASET_DIR/dataset_$len/$t/$err
-                $ANALYSER -- $BASELINE_DIR/$tool  $file_path/${t}_ref.fa $file_path/${t}_query.fa &> $TEMP_FILE
+                
+                if [[ $tool == $talco_xdrop ]];
+                then
+                    $ANALYSER -- $BASELINE_DIR/$tool -r $file_path/${t}_ref.fa -q $file_path/${t}_query.fa &> $TEMP_FILE
+
+                elif [[ $tool == $biwfa ]];
+                then
+                    echo "BIWFA"
+                else
+                    $ANALYSER -- $BASELINE_DIR/$tool  $file_path/${t}_ref.fa $file_path/${t}_query.fa &> $TEMP_FILE
+
+                fi            
+                
                 printf '%s\t%s\t%s\t%s\n' "$(basename $tool) $(cat $TEMP_FILE | parser "memory=" "B") $(cat $TEMP_FILE | parser "cpuenergy" "J") $(cat $TEMP_FILE | parser "cputime"   "s")"        
             done
         done
