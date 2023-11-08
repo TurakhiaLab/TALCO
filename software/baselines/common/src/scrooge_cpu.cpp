@@ -53,7 +53,7 @@ int cigar_read(std::string cigar, int affine){
 
 void cpu_pairwise(std::vector<std::string> texts, std::vector<std::string> queries){
 
-    int threads = 1;
+    int threads = 32;
     vector<Alignment_t> alignments = genasm_cpu::align_all(texts, queries, threads);
     int affine = 1;
     for(Alignment_t &aln : alignments){
