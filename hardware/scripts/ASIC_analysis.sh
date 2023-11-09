@@ -4,7 +4,7 @@ CURR_DIR="$PWD"
 
 which=$1
 
-OPENROAD_DIR=/home/OpenROAD-flow-scripts
+OPENROAD_DIR=/OpenROAD-flow-scripts
 SV2V=$CURR_DIR/../dependencies/sv2v/bin/sv2v
 
 if [[ $which == "XDrop" ]]; then
@@ -33,13 +33,13 @@ if [[ $which == "XDrop" ]]; then
     # # sv to v
     $SV2V $TALCO_XDROP_SV > $TALCO_XDROP_V 
 
-    yes "" | cp -f $TALCO_XDROP_RTL $OPENROAD_DIR/flow/designs/src/gcd/
-    yes "" | cp -f $TALCO_XDROP_CONFIG $OPENROAD_DIR/flow/designs/nangate45/gcd/
-    yes "" | cp -f $TALCO_XDROP_CONST $OPENROAD_DIR/flow/designs/nangate45/gcd/
-    yes "" | cp -f $TALCO_XDROP_MKFILE $OPENROAD_DIR/flow/Makefile
+    "yes" | cp -f $TALCO_XDROP_RTL $OPENROAD_DIR/flow/designs/src/gcd/
+    "yes" | cp -f $TALCO_XDROP_CONFIG $OPENROAD_DIR/flow/designs/nangate45/gcd/
+    "yes" | cp -f $TALCO_XDROP_CONST $OPENROAD_DIR/flow/designs/nangate45/gcd/
+    # yes "" | cp -f $TALCO_XDROP_MKFILE $OPENROAD_DIR/flow/Makefile
 
-    # cd $OPENROAD_DIR/flow
-    # make
+    cd $OPENROAD_DIR/flow
+    make
 
 
     # docker run --rm -it \
@@ -72,11 +72,13 @@ elif [[ $which == "WFAA" ]]; then
     # sv to v
     $SV2V $TALCO_WFAA_SV > $TALCO_WFAA_V 
 
-    yes "" | cp -f $TALCO_WFAA_RTL $OPENROAD_DIR/flow/designs/src/gcd/
-    yes "" | cp -f $TALCO_WFAA_CONFIG $OPENROAD_DIR/flow/designs/nangate45/gcd/
-    yes "" | cp -f $TALCO_WFAA_CONST $OPENROAD_DIR/flow/designs/nangate45/gcd/
-    yes "" | cp -f $TALCO_WFAA_MKFILE $OPENROAD_DIR/flow/Makefile
+    "yes" | cp -f $TALCO_WFAA_RTL $OPENROAD_DIR/flow/designs/src/gcd/
+    "yes" | cp -f $TALCO_WFAA_CONFIG $OPENROAD_DIR/flow/designs/nangate45/gcd/
+    "yes" | cp -f $TALCO_WFAA_CONST $OPENROAD_DIR/flow/designs/nangate45/gcd/
+    # yes "" | cp -f $TALCO_WFAA_MKFILE $OPENROAD_DIR/flow/Makefile
 
+    cd $OPENROAD_DIR/flow
+    make
 
     # docker run --rm -it \
     #     -v $TALCO_WFAA_RTL:/OpenROAD-flow-scripts/flow/designs/src/gcd \
@@ -89,6 +91,6 @@ else
     echo "Usage: source $m [XDrop/WFAA]"
 fi
 
-
+cd $CURR_DIR
 
 
