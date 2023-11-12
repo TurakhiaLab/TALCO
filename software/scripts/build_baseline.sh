@@ -20,6 +20,7 @@ then
     # Edlib
     echo "Building WFA-Edlib...."
     cd "$baseline_dir/edlib"
+    cp ../common/CMakeLists.txt .
     mkdir -p build && cd build 
     cmake -D CMAKE_BUILD_TYPE=Release .. &>> $trash_file
     make &>> $trash_file
@@ -36,6 +37,7 @@ then
 
     cd $baseline_dir/common
     make &>> $trash_file
+
 
     rm -f $trash_file
 
