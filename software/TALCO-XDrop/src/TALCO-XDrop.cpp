@@ -99,10 +99,7 @@ void Talco_xdrop::Align (
                 tile_aln.clear();
                 // printf("Tile: %d, (r,q) = (%d,%d)\n",tile, reference_idx, query_idx);
                 tile++;
-                if (tile == 15)
-                {
-                    // break;
-                }
+                // aln.clear();
             }
             score = Score(params, aln, reference[n], query[n], reference_idx, query_idx);
             

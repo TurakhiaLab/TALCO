@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <string>
 #include <boost/program_options.hpp> 
@@ -60,12 +61,12 @@ int main(int argc, char** argv) {
         exit(1);
     }
 
-    kseq_rd = kseq_init(f_rd);
-    while (kseq_read(kseq_rd) >= 0) {
-        size_t seqLen = kseq_rd->seq.l;
-        std::string seqString = std::string(kseq_rd->seq.s, seqLen);
-        reference.push_back(seqString);
-    }
+    // kseq_rd = kseq_init(f_rd);
+    // while (kseq_read(kseq_rd) >= 0) {
+    //     size_t seqLen = kseq_rd->seq.l;
+    //     std::string seqString = std::string(kseq_rd->seq.s, seqLen);
+    //     reference.push_back(seqString);
+    // }
 
     // fprintf(stderr, "Completed in %ld msec \n\n", timer.Stop());
 
@@ -79,19 +80,19 @@ int main(int argc, char** argv) {
         exit(1);
     }
 
-    kseq_rd = kseq_init(f_rd);
+    // kseq_rd = kseq_init(f_rd);
 
-    while (kseq_read(kseq_rd) >= 0) {
-        size_t seqLen = kseq_rd->seq.l;
-        std::string seqString = std::string(kseq_rd->seq.s, seqLen);
-        query.push_back(seqString);
-    }
+    // while (kseq_read(kseq_rd) >= 0) {
+    //     size_t seqLen = kseq_rd->seq.l;
+    //     std::string seqString = std::string(kseq_rd->seq.s, seqLen);
+    //     query.push_back(seqString);
+    // }
 
     // fprintf(stderr, "Completed in %ld msec \n\n", timer.Stop());
 
-    assert (reference.size() == query.size());
+    // assert (reference.size() == query.size());
 
-    size_t num_alignments = reference.size();
+    // size_t num_alignments = reference.size();
 
     timer.Start();
     // fprintf(stderr, "Initializing params and device arrays.\n");
@@ -100,7 +101,35 @@ int main(int argc, char** argv) {
 
     timer.Start();
     // fprintf(stderr, "Performing alignment.\n");
-    Align (params, reference, query, num_alignments);
+    
+    std::ifstream query_data;
+    std::ifstream ref_data;
+    ref_data.open(referenceFilename);
+    query_data.open(queryFilename);
+    // int count = 0;
+    while (true) {
+        reference.clear();
+        query.clear();
+        std::string ref;
+        std::string que;
+
+        std::getline(ref_data, ref);
+        std::getline(query_data, que);
+        if (ref_data.eof())
+            break;
+        if (query_data.eof())
+            break;
+
+        if (ref[0] == '>')
+            continue;
+        
+        reference.push_back(ref);
+        query.push_back(que);
+        size_t num_alignments = 1;
+        Align (params, reference, query, num_alignments);
+        // std::cout << count << std::endl;
+        // count++;
+    }
     // fprintf(stderr, "Completed in %ld msec \n\n", timer.Stop());
 
     return 0;

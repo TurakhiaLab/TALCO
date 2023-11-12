@@ -53,8 +53,8 @@ int main(int argc, char* argv[]){
   attributes.use_tile=true;
     // Set heuristic wf-adaptive
   attributes.heuristic.strategy = wf_heuristic_wfadaptive;
-  attributes.heuristic.min_wavefront_length = 10;
-  attributes.heuristic.max_distance_threshold = 50;
+  attributes.heuristic.min_wavefront_length = 5;
+  attributes.heuristic.max_distance_threshold = 20;
   attributes.heuristic.steps_between_cutoffs = 1;
   //Semi-global
       attributes.alignment_form.span = alignment_endsfree;
@@ -62,11 +62,11 @@ int main(int argc, char* argv[]){
     attributes.alignment_form.pattern_end_free = 1;
     attributes.alignment_form.text_begin_free = 0;
     attributes.alignment_form.text_end_free = 1;
-  attributes.memory_mode = wavefront_memory_med;
+  attributes.memory_mode = wavefront_memory_low;
 
   // Initialize Wavefront Aligner
   wavefront_aligner_t* const wf_aligner = wavefront_aligner_new(&attributes);
-  wf_aligner->marking_score=32;
+  wf_aligner->marking_score=16;
   
     //sequence file from nanosim, reference, faidx
     if(argc!=3){
