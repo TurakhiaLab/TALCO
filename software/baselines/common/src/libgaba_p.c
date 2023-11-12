@@ -35,7 +35,7 @@ unsigned char seq_nt4_table[256] = {
 void gaba_helper(gaba_t *ctx, char* ref[], size_t rlen[], char* query[], size_t qlen[], int count){
 	#pragma omp for
 	for (int i = 0; i< count; i++){
-		char const t[64] = { 0 };							/* tail array */
+		char const t[10] = { 0 };							/* tail array */
 
 		//int rlen = strlen(ref[i]);
 		//int qlen = strlen(query[i]);
@@ -55,7 +55,7 @@ void gaba_helper(gaba_t *ctx, char* ref[], size_t rlen[], char* query[], size_t 
 		
 		struct gaba_section_s asec = gaba_build_section(0, ref_, rlen[i]);
 		struct gaba_section_s bsec = gaba_build_section(2, query_, qlen[i]);
-		struct gaba_section_s tail = gaba_build_section(4, t, 64);
+		struct gaba_section_s tail = gaba_build_section(4, t, 10);
 
 		/* create thread-local object */
 		gaba_dp_t *dp = gaba_dp_init(ctx);
@@ -88,12 +88,12 @@ void gaba_helper(gaba_t *ctx, char* ref[], size_t rlen[], char* query[], size_t 
 		);
 		//char *fp = NULL;
 		printf("score(%" PRId64 "), path length(%" PRIu64 ")\n", r->score, r->plen);
-		//gaba_print_cigar_forward(
-		//	printer, (void*) stdout,						/* printer */
-		//	r->path,										/* bit-encoded path array */
-		//	0,												/* offset is always zero */
-		//	r->plen											/* path length */
-		//);
+		gaba_print_cigar_reverse(
+			printer, (void*) stdout,						/* printer */
+			r->path,										/* bit-encoded path array */
+			0,												/* offset is always zero */
+			r->plen											/* path length */
+		);
 		//printf("\n");
 
 		/* clean up */
@@ -107,11 +107,11 @@ void gaba_helper(gaba_t *ctx, char* ref[], size_t rlen[], char* query[], size_t 
 int main(int argc, char *argv[]) {
 	/* create config */
 	gaba_t *ctx = gaba_init(GABA_PARAMS(
-		.xdrop = 100,
+		.xdrop = 127,
 		GABA_SCORE_SIMPLE(2, 1, 2, 1)					/* match award, mismatch penalty, gap open penalty (G_i), and gap extension penalty (G_e) */
 	));
 
-	int thread = 1;
+	int thread = 32;
 
   	FILE* ref_data = fopen(argv[1], "r");
   	FILE* query_data = fopen(argv[2], "r");

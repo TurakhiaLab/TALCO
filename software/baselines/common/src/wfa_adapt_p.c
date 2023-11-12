@@ -89,7 +89,7 @@ int main(int argc,char* argv[]) {
   char* pattern[64] = {NULL};
   char* text[64] = {NULL};
 
-  int thread = 1;
+  int thread = 32;
   omp_set_num_threads(thread);
 
   while (true){
