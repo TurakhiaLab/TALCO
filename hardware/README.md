@@ -43,7 +43,7 @@ source DRAM_analysis.sh
 > Total execution time (TET) $=$ Logic cycle count (LCC) $\times$ Critical path delay (PD) $+$ DRAM cycle count (DCC) $\times$ ($\frac{1}{DRAM frequency}$)  
 > Throughput $=$ Number of PE's $\times$ $\frac{1}{TET}$
 
-Note: $LCC$ of our designs can be calculated by simulating the designs using the testbench provided in the [repository](../hardware/TALCO-XDrop/hdl/) 
+Note: $LCC$ of our designs can be calculated by simulating the designs using the testbench provided in the [repository](./hardware/TALCO-XDrop/hdl/) 
 
 5. ASIC baseline 
 > Step 1-4 is performed for alignment throughput of [GACT-X](https://github.com/gsneha26/Darwin-WGA/tree/master/src/hdl/GACTX) (used as ASIC baseline) 
