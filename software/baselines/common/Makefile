@@ -42,7 +42,7 @@ BIWFA_CC_FLAGS=-Wall -g -O3 -march=native
 # edlib_p:src/edlib_p.cpp 
 # 	$(CXX) -L$(EDLIB_LINK) -L$(EDLIB_LINK)/.. -L$(EDLIB_LINK)/../.. -I$(EDLIB_H) -I$(EDLIB_T) -ledlib src/edlib_p.cpp  -fopenmp -o edlib_p 
 
-native: libgaba wadapt scrooge_cpu libgaba_p wadapt_p scrooge_cpu_p BiWFA_p
+native: libgaba wadapt scrooge_cpu libgaba_p wadapt_p scrooge_cpu_p BiWFA_p scrooge_gpu
 BiWFA_p: src/BiWFA_p.c
 	$(CC) $(BIWFA_CC_FLAGS) -L$(BIWFA_FOLDER_LIB) -I$(BIWFA_FOLDER) -I$(BIWFA_ALIGN_FOLDER) -I$(BIWFA_ALIGN_FOLDER)/..  $(BIWFA_ALIGN_BUILD_FOLDER)/*.o  $(BIWFA_FOLDER_BUILD)/*.o src/BiWFA_p.c -o BiWFA_p -lrt  -lwfa -lm -fopenmp
 
@@ -69,4 +69,4 @@ scrooge_gpu: src/scrooge_gpu.cu $(SCROOGE_SRCPATHS) $(SCROOGE_HEADERPATHS)
 
 
 clean:
-	rm -rf libgaba wadapt scrooge_cpu libgaba_p wadapt_p scrooge_cpu_p BiWFA_p
+	rm -rf libgaba wadapt scrooge_cpu libgaba_p wadapt_p scrooge_cpu_p BiWFA_p scrooge_gpu
