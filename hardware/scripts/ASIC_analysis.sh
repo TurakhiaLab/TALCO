@@ -5,15 +5,15 @@ CURR_DIR="$PWD"
 which=$1
 
 OPENROAD_DIR=/OpenROAD-flow-scripts
-SV2V=$CURR_DIR/../dependencies/sv2v/bin/sv2v
+SV2V=/dependencies/sv2v/bin/sv2v
 
 if [[ $which == "XDrop" ]]; then
     TALCO_XDROP_RTL="$CURR_DIR/../TALCO-XDrop/openroad/rtl"
     mkdir -p $TALCO_XDROP_RTL
     TALCO_XDROP_SV="$TALCO_XDROP_RTL/gcd.sv"
     TALCO_XDROP_V="$TALCO_XDROP_RTL/gcd.v"
-    TALCO_XDROP_CONFIG="$CURR_DIR/../TALCO-XDrop/openroad/config.mk"
-    TALCO_XDROP_CONST="$CURR_DIR/../TALCO-XDrop/openroad/constraint.sdc"
+    TALCO_XDROP_CONFIG="$CURR_DIR/../TALCO-XDrop/openroad/config/config.mk"
+    TALCO_XDROP_CONST="$CURR_DIR/../TALCO-XDrop/openroad/config/constraint.sdc"
     TALCO_XDROP_MKFILE="$CURR_DIR/../TALCO-XDrop/openroad/Makefile"
 
     rm -f $TALCO_XDROP_SV $TALCO_XDROP_V
@@ -28,12 +28,12 @@ if [[ $which == "XDrop" ]]; then
         fi
     done
 
-    sed -i -e 's/TALCO_XDrop/gcd/g' $TALCO_XDROP_SV
+    sed -i -e 's/PE_Array/gcd/g' $TALCO_XDROP_SV
 
     # # sv to v
     $SV2V $TALCO_XDROP_SV > $TALCO_XDROP_V 
 
-    "yes" | cp -f $TALCO_XDROP_RTL $OPENROAD_DIR/flow/designs/src/gcd/
+    "yes" | cp -f $TALCO_XDROP_V $OPENROAD_DIR/flow/designs/src/gcd/
     "yes" | cp -f $TALCO_XDROP_CONFIG $OPENROAD_DIR/flow/designs/nangate45/gcd/
     "yes" | cp -f $TALCO_XDROP_CONST $OPENROAD_DIR/flow/designs/nangate45/gcd/
     # yes "" | cp -f $TALCO_XDROP_MKFILE $OPENROAD_DIR/flow/Makefile
@@ -50,9 +50,11 @@ if [[ $which == "XDrop" ]]; then
 
 elif [[ $which == "WFAA" ]]; then
     TALCO_WFAA_RTL="$CURR_DIR/../TALCO-WFAA/openroad/rtl"
+    mkdir -p $TALCO_WFAA_RTL
     TALCO_WFAA_SV="$TALCO_WFAA_RTL/gcd.sv"
     TALCO_WFAA_V="$TALCO_WFAA_RTL/gcd.v"
-    TALCO_WFAA_CONFIG="$CURR_DIR/../TALCO-WFAA/openroad/config"
+    TALCO_WFAA_CONFIG="$CURR_DIR/../TALCO-WFAA/openroad/config/config.mk"
+    TALCO_XDROP_CONST="$CURR_DIR/../TALCO-WFAA/openroad/config/constraint.sdc"
     TALCO_WFAA_MKFILE="$CURR_DIR/../TALCO-WFAA/openroad/Makefile"
 
     rm -f $TALCO_WFAA_SV $TALCO_WFAA_V
@@ -72,7 +74,7 @@ elif [[ $which == "WFAA" ]]; then
     # sv to v
     $SV2V $TALCO_WFAA_SV > $TALCO_WFAA_V 
 
-    "yes" | cp -f $TALCO_WFAA_RTL $OPENROAD_DIR/flow/designs/src/gcd/
+    "yes" | cp -f $TALCO_WFAA_V $OPENROAD_DIR/flow/designs/src/gcd/
     "yes" | cp -f $TALCO_WFAA_CONFIG $OPENROAD_DIR/flow/designs/nangate45/gcd/
     "yes" | cp -f $TALCO_WFAA_CONST $OPENROAD_DIR/flow/designs/nangate45/gcd/
     # yes "" | cp -f $TALCO_WFAA_MKFILE $OPENROAD_DIR/flow/Makefile
