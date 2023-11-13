@@ -2,7 +2,7 @@
 <div align="center">
 	<!-- <img src="images/talco.gif" style="width:400px; margin:0 0 -40px 0; overflow:hidden;"/> -->
 	
-<div style="background-image: url('images/talco.gif'); width:400px; height:380px; background-position:center; background-size:cover;">
+<div style="background-image: "images/talco.gif"; width:400px; height:380px; background-position:center; background-size:cover;">
 </div>
 </div>
 
