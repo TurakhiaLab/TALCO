@@ -15,6 +15,10 @@ biwfa_p=baselines/common/BiWFA_p
 scrooge_p=baselines/common/scrooge_cpu_p
 libgaba_p=baselines/common/libgaba_p
 
+scrooge_gpu=baselines/common/scrooge_gpu
+darwin_dir=$BASELINE_DIR/baselines/darwin-gpu
+darwin_gpu=./darwin
+
 talco_xdrop=TALCO-XDrop/build/TALCO-XDrop
 talco_wfaa=TALCO-WFAA/build/TALCO-WFAA
 
@@ -33,8 +37,10 @@ elif [[ $1 == "thp" ]]; then
     tools+="$wadapt_p "
     tools+="$biwfa_p "
     tools+="$scrooge_p "
+    tools+="$scrooge_gpu "
+    tools+="$darwin_gpu "
 elif [[ $1 == "thp/w" ]]; then
-    # tools+="$libgaba_p "
+    tools+="$libgaba_p "
     tools+="$wadapt "
 else
     tool+=""
@@ -52,13 +58,13 @@ acc+="0.85 "
 
 length=""
 length+="10k "
-# length+="20k "
-# length+="50k "
-# length+="100k "
+length+="20k "
+length+="50k "
+length+="100k "
 
 type=""
 type+="ont "
-# type+="query "
+type+="pacbio "
 
 ANALYSER="runexec --read-only-dir / --overlay-dir ."
 
@@ -130,6 +136,10 @@ do
                 elif [ $tool == $biwfa ] || [ $tool == $biwfa_p ];
                 then
                     $ANALYSER -- $BASELINE_DIR/$tool -i $file_path/${t}_biwfa.fa --affine-penalties 0,3,6,1 --wfa-score-only &> $TEMP_FILE
+                elif [[ $tool == $darwin_gpu ]]; then
+                    cd $darwin_dir
+                    $ANALYSER -- $tool  $file_path/${t}_darwingpu_ref.fa $file_path/${t}_darwingpu_query.fa 8 32 64 &> $TEMP_FILE
+                    cd $curr_dir
                 else
                     $ANALYSER -- $BASELINE_DIR/$tool  $file_path/${t}_ref.fa $file_path/${t}_query.fa &> $TEMP_FILE
                 fi            
