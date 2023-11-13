@@ -15,7 +15,7 @@ git clone https://github.com/TurakhiaLab/TALCO.git
 cd TALCO/software
 ```
 
-#### Install Dependencies
+#### Install Dependencies (Not required if using Docker Image)
 ```
 ./install_dependencies.sh
 ```
@@ -36,13 +36,23 @@ source build_baseline.sh make
 cd ..
 ```
 
-#### Memory Usage and Energy Consumption Analysis
+#### Analysis
 * Setup dataset
 ```
 cd scripts
 source setup_dataset.sh
 ```
-* Run TALCO-XDrop, TALCO-WFAA, and baseline tools
+* Compute memory footprint of TALCO-XDrop, TALCO-WFAA, and baseline tools executing on single-CPU thread
 ``` 
-./analysis.sh
+./analysis.sh mem
+```
+
+* Compute throughput of all software baseline tools executing on 32 CPU threads
+``` 
+./analysis.sh thp
+```
+
+* Compute throughput/watt of Libgaba and WFA-Adapt algorithms executing on 32 CPU threads
+``` 
+./analysis.sh thp/w
 ```
