@@ -46,7 +46,7 @@ source DRAM_analysis.sh
 Note: $LCC$ of our designs can be calculated by simulating the designs using the testbench provided in the [repository](../hardware/TALCO-XDrop/hdl/) 
 
 5. ASIC baseline 
-> Step 1-4 is performed for alignment throughput of GACT-X (used as ASIC basline) 
+> Step 1-4 is performed for alignment throughput of [GACT-X](https://github.com/gsneha26/Darwin-WGA/tree/master/src/hdl/GACTX) (used as ASIC basline) 
 
 ## Building on AWS EC2 F1 instace
 Follow the below instructions to execute TALCO-XDrop and TALCO-WFAA on AWS EC2 F1 instance, [f1.2xlarge]().
