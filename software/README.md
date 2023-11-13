@@ -29,7 +29,7 @@ cd ..
 ```
 
 #### Baseline Tools
-We have used [Libgaba](https://github.com/ocxtal/libgaba), [WFA-Adapt](https://github.com/smarco/WFA2-lib), [Edlib](https://github.com/Martinsos/edlib), [BiWFA](https://github.com/smarco/BiWFA-paper), and [Scrooge](https://github.com/CMU-SAFARI/Scrooge) as software baselines. Use the following commands to build the baseline tools. 
+We have used [Libgaba](https://github.com/ocxtal/libgaba), [WFA-Adapt](https://github.com/smarco/WFA2-lib), [Edlib](https://github.com/Martinsos/edlib), [BiWFA](https://github.com/smarco/BiWFA-paper), [Scrooge](https://github.com/CMU-SAFARI/Scrooge), and [Darwin-GPU](https://github.com/Tongdongq/darwin-gpu) as software baselines. Use the following commands to build the baseline tools. 
 ```
 cd scripts
 source build_baseline.sh make
