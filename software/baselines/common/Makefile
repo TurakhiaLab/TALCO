@@ -64,6 +64,9 @@ scrooge_cpu: src/scrooge_cpu.cpp $(SCROOGE_SRCPATHS) $(SCROOGE_HEADERPATHS)
 scrooge_cpu_p: src/scrooge_cpu_p.cpp $(SCROOGE_SRCPATHS) $(SCROOGE_HEADERPATHS)
 	$(SCROOGE_NVCC) $(SCROOGE_NVCC_FLAGS)  src/scrooge_cpu_p.cpp $(SCROOGE_SRCPATHS) -L$(SCROOGE_SRC) -I$(SCROOGE_SRC) -o scrooge_cpu_p $(SCROOGE_CXX_FLAGS) -lstdc++fs -Xcompiler -fopenmp
 
+scrooge_gpu: src/scrooge_gpu.cu $(SCROOGE_SRCPATHS) $(SCROOGE_HEADERPATHS)
+	$(SCROOGE_NVCC) $(SCROOGE_NVCC_FLAGS)  src/scrooge_gpu.cu $(SCROOGE_SRCPATHS) -L$(SCROOGE_SRC) -I$(SCROOGE_SRC) -o scrooge_gpu $(SCROOGE_CXX_FLAGS) -lstdc++fs -Xcompiler -fopenmp
+
 
 clean:
-	rm -rf scrooge_cpu scrooge_cpu_p wadapt wadapt_p libgaba libgaba_p BiWFA_p
+	rm -rf libgaba wadapt scrooge_cpu libgaba_p wadapt_p scrooge_cpu_p BiWFA_p
