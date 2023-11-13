@@ -1,6 +1,6 @@
 # TALCO
 <div align="center">
-<div style="background-image:url(images/talco.gif); width:400px; height:380px; background-position:center; background-size:cover;">
+<div style="background-image:"images/talco.gif"; width:400px; height:380px; background-position:center; background-size:cover;">
 </div>
 </div>
 
