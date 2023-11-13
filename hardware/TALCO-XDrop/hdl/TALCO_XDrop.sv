@@ -3,7 +3,7 @@ module TALCO_XDrop #(
     parameter DATA_WIDTH = 8,
     parameter NUM_BLOCK  = 1,
     parameter BLOCK_WIDTH = DATA_WIDTH/NUM_BLOCK,
-    parameter NUM_PE = 16,
+    parameter NUM_PE = 8,
     parameter LOG_NUM_PE = $clog2(NUM_PE),
     parameter MAX_TILE_SIZE = 512,
     parameter LOG_MAX_TILE_SIZE = $clog2(MAX_TILE_SIZE),
