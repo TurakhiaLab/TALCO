@@ -1,0 +1,1500 @@
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.indel.alg -a indel-wfa --check=correct"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 948
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.edit.alg -a edit-wfa --check=correct"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 900
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.affine.alg -a gap-affine-wfa --check=correct"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1020
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 25
+	Voluntary context switches: 0
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.affine2p.alg -a gap-affine2p-wfa --check=correct"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1028
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 25
+	Voluntary context switches: 0
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.affine.p0.alg -a gap-affine-wfa --check=correct --affine-penalties=0,1,2,1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 968
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.affine.p1.alg -a gap-affine-wfa --check=correct --affine-penalties=0,3,1,4"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 940
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.affine.p2.alg -a gap-affine-wfa --check=correct --affine-penalties=0,5,3,2"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 892
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.affine.p3.alg -a gap-affine-wfa --check=correct --affine-penalties=-5,1,2,1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 868
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.affine.p4.alg -a gap-affine-wfa --check=correct --affine-penalties=-2,3,1,4"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 940
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.affine.p5.alg -a gap-affine-wfa --check=correct --affine-penalties=-3,5,3,2"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1020
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.affine.wfapt0.alg -a gap-affine-wfa --check=correct --wfa-heuristic=wfa-adaptive --wfa-heuristic-parameters=10,50,1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 940
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.affine.wfapt1.alg -a gap-affine-wfa --check=correct --wfa-heuristic=wfa-adaptive --wfa-heuristic-parameters=10,50,10"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 880
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 22
+	Voluntary context switches: 0
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.score.indel.alg -a indel-wfa --wfa-score-only"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 964
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.score.edit.alg -a edit-wfa --wfa-score-only"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 940
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.score.affine.alg -a gap-affine-wfa --wfa-score-only"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 964
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.score.affine2p.alg -a gap-affine2p-wfa --wfa-score-only"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 880
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.score.affine.p0.alg -a gap-affine-wfa --wfa-score-only --affine-penalties=0,1,2,1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 960
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.score.affine.p1.alg -a gap-affine-wfa --wfa-score-only --affine-penalties=0,3,1,4"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 888
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.score.affine.p2.alg -a gap-affine-wfa --wfa-score-only --affine-penalties=0,5,3,2"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 908
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 22
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.score.affine.p3.alg -a gap-affine-wfa --wfa-score-only --affine-penalties=-5,1,2,1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 916
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.score.affine.p4.alg -a gap-affine-wfa --wfa-score-only --affine-penalties=-2,3,1,4"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 916
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.score.affine.p5.alg -a gap-affine-wfa --wfa-score-only --affine-penalties=-3,5,3,2"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 904
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 22
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.score.affine.wfapt0.alg -a gap-affine-wfa --wfa-score-only --wfa-heuristic=wfa-adaptive --wfa-heuristic-parameters=10,50,1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 912
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.score.affine.wfapt1.alg -a gap-affine-wfa --wfa-score-only --wfa-heuristic=wfa-adaptive --wfa-heuristic-parameters=10,50,10"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 952
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 0
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.pb.indel.alg -a indel-wfa --wfa-memory-mode=med --check=correct"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 908
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.pb.edit.alg -a edit-wfa --wfa-memory-mode=med --check=correct"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1028
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 25
+	Voluntary context switches: 0
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.pb.affine.alg -a gap-affine-wfa --wfa-memory-mode=med --check=correct"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 912
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.pb.affine2p.alg -a gap-affine2p-wfa --wfa-memory-mode=med --check=correct"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 912
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.pb.affine.p0.alg -a gap-affine-wfa --wfa-memory-mode=med --check=correct --affine-penalties=0,1,2,1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 868
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.pb.affine.p1.alg -a gap-affine-wfa --wfa-memory-mode=med --check=correct --affine-penalties=0,3,1,4"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1028
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 25
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.pb.affine.p2.alg -a gap-affine-wfa --wfa-memory-mode=med --check=correct --affine-penalties=0,5,3,2"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 868
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.pb.affine.p3.alg -a gap-affine-wfa --wfa-memory-mode=med --check=correct --affine-penalties=-5,1,2,1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 868
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.pb.affine.p4.alg -a gap-affine-wfa --wfa-memory-mode=med --check=correct --affine-penalties=-2,3,1,4"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 916
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 0
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.pb.affine.p5.alg -a gap-affine-wfa --wfa-memory-mode=med --check=correct --affine-penalties=-3,5,3,2"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 884
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.pb.affine.wfapt0.alg -a gap-affine-wfa --wfa-memory-mode=med --check=correct --wfa-heuristic=wfa-adaptive --wfa-heuristic-parameters=10,50,1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1020
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 25
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.pb.affine.wfapt1.alg -a gap-affine-wfa --wfa-memory-mode=med --check=correct --wfa-heuristic=wfa-adaptive --wfa-heuristic-parameters=10,50,10"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1020
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 25
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.indel.alg -a indel-wfa --wfa-memory-mode=ultralow --check=correct"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1020
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.edit.alg -a edit-wfa --wfa-memory-mode=ultralow --check=correct"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 964
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.affine.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --check=correct"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 868
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.affine2p.alg -a gap-affine2p-wfa --wfa-memory-mode=ultralow --check=correct"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 852
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 22
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.affine.p0.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --check=correct --affine-penalties=0,1,2,1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 924
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.affine.p1.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --check=correct --affine-penalties=0,3,1,4"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 924
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.affine.p2.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --check=correct --affine-penalties=0,5,3,2"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 884
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.affine.p3.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --check=correct --affine-penalties=-5,1,2,1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 892
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.affine.p4.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --check=correct --affine-penalties=-2,3,1,4"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 920
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.affine.p5.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --check=correct --affine-penalties=-3,5,3,2"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 904
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 22
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.affine.wfapt0.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --check=correct --wfa-heuristic=wfa-adaptive --wfa-heuristic-parameters=10,50,1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1028
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 25
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.affine.wfapt1.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --check=correct --wfa-heuristic=wfa-adaptive --wfa-heuristic-parameters=10,50,10"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 920
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.score.indel.alg -a indel-wfa --wfa-memory-mode=ultralow --wfa-score-only"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 892
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.score.edit.alg -a edit-wfa --wfa-memory-mode=ultralow --wfa-score-only"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 852
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 22
+	Voluntary context switches: 0
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.score.affine.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --wfa-score-only"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 920
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 0
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.score.affine2p.alg -a gap-affine2p-wfa --wfa-memory-mode=ultralow --wfa-score-only"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 900
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.score.affine.p0.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --wfa-score-only --affine-penalties=0,1,2,1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 940
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.score.affine.p1.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --wfa-score-only --affine-penalties=0,3,1,4"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 892
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.score.affine.p2.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --wfa-score-only --affine-penalties=0,5,3,2"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 852
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 22
+	Voluntary context switches: 0
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.score.affine.p3.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --wfa-score-only --affine-penalties=-5,1,2,1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 884
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.score.affine.p4.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --wfa-score-only --affine-penalties=-2,3,1,4"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 964
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.score.affine.p5.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --wfa-score-only --affine-penalties=-3,5,3,2"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 848
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 22
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.score.affine.wfapt0.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --wfa-score-only --wfa-heuristic=wfa-adaptive --wfa-heuristic-parameters=10,50,1"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 896
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 22
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+time: cannot run ./bin/align_benchmark: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "./bin/align_benchmark -i ./tests/wfa.utest.seq -o ./tests/test.biwfa.score.affine.wfapt1.alg -a gap-affine-wfa --wfa-memory-mode=ultralow --wfa-score-only --wfa-heuristic=wfa-adaptive --wfa-heuristic-parameters=10,50,10"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 912
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 23
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127

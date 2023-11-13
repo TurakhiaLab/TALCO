@@ -1,0 +1,18 @@
+[submodule "software/baselines/edlib"]
+	path = software/baselines/edlib
+	url = https://github.com/Martinsos/edlib.git
+[submodule "software/baselines/libgaba"]
+	path = software/baselines/libgaba
+	url = https://github.com/ocxtal/libgaba.git
+[submodule "software/baselines/WFA2-lib"]
+	path = software/baselines/WFA2-lib
+	url = https://github.com/smarco/WFA2-lib.git
+[submodule "software/baselines/Scrooge"]
+	path = software/baselines/Scrooge
+	url = https://github.com/CMU-SAFARI/Scrooge.git
+[submodule "software/baselines/darwin-gpu"]
+	path = software/baselines/darwin-gpu
+	url = https://github.com/Tongdongq/darwin-gpu.git
+[submodule "hardware/baselines/Darwin-WGA"]
+	path = hardware/baselines/Darwin-WGA
+	url = https://github.com/gsneha26/Darwin-WGA.git
