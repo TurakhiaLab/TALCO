@@ -32,4 +32,4 @@ If you use TALCO in your work, please cite the following paper:
 (**ToDo**)
 
 ## **Getting Help**
-We appreciate any feedback and suggestions. Feel free to raise an issue or submit a pull request on Github or contact Sumit Walia (swalia AT ucsd DOT edu).
+We appreciate any feedback and suggestions. Feel free to raise an issue or submit a pull request on GitHub or contact Sumit Walia (swalia AT ucsd DOT edu).

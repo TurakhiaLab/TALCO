@@ -13,7 +13,7 @@ cd TALCO/hardware
 
 #### 2. System Verilog to Verilog Conversion (Not required if using Docker Image)
 
-OpenROAD only supports Verilog; therefore, we use [sv2v](https://github.com/zachjs/sv2v.git) to convert our codebase in system verilog to verilog. Use the following command to install [sv2v](https://github.com/zachjs/sv2v.git):
+OpenROAD only supports Verilog; therefore, we use [sv2v](https://github.com/zachjs/sv2v.git) to convert our codebase in System-verilog to Verilog. Use the following command to install [sv2v](https://github.com/zachjs/sv2v.git):
 ```
 cd scripts
 source install_dependecies.sh
@@ -38,7 +38,7 @@ cd scripts
 source DRAM_analysis.sh
 ```
 
-4. Aligment throughput of ASIC designs
+4. Alignment throughput of ASIC designs
 
 > Total execution time (TET) $=$ Logic cycle count (LCC) $\times$ Critical path delay (PD) $+$ DRAM cycle count (DCC) $\times$ ($\frac{1}{DRAM frequency}$)  
 > Throughput $=$ Number of PE's $\times$ $\frac{1}{TET}$
@@ -46,7 +46,7 @@ source DRAM_analysis.sh
 Note: $LCC$ of our designs can be calculated by simulating the designs using the testbench provided in the [repository](../hardware/TALCO-XDrop/hdl/) 
 
 5. ASIC baseline 
-> Step 1-4 is performed for alignment throughput of [GACT-X](https://github.com/gsneha26/Darwin-WGA/tree/master/src/hdl/GACTX) (used as ASIC basline) 
+> Step 1-4 is performed for alignment throughput of [GACT-X](https://github.com/gsneha26/Darwin-WGA/tree/master/src/hdl/GACTX) (used as ASIC baseline) 
 
 ## Building on AWS EC2 F1 instace
 Follow the below instructions to execute TALCO-XDrop and TALCO-WFAA on AWS EC2 F1 instance, [f1.2xlarge]().
