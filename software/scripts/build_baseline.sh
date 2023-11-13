@@ -38,6 +38,11 @@ then
     cd $baseline_dir/common
     make &>> $trash_file
 
+    # Darwin-GPU
+    echo "Building Darwin-GPU...."
+    cd "$baseline_dir/darwin-gpu"
+    ./z_compile.sh GPU &>> $trash_file
+
 
     rm -f $trash_file
 
@@ -68,6 +73,14 @@ then
     # Scrooge
     echo "Cleaning Scrooge...."
     cd "$baseline_dir/Scrooge"
+    make clean &>> $trash_file
+
+    # Darwin-GPU
+    echo "Cleaning Darwin-GPU...."
+    cd "$baseline_dir/darwin-gpu"
+    make clean &>> $trash_file
+
+    cd $baseline_dir/common
     make clean &>> $trash_file
 
     rm -f $trash_file
