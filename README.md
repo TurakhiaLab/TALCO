@@ -1,7 +1,8 @@
 # TALCO
 <div align="center">
-<div style="background-image:"images/talco.gif"; width:400px; height:380px; background-position:center; background-size:cover;">
-</div>
+<!-- <div style="width:400px; height:400px; background-position:center; background-size:cover;"> -->
+<!-- </div> -->
+<img src="images/talco.gif" style="width:400px; height:400px; margin: 0px 0px -20px 0px;"/>
 </div>
 
 **TALCO** is a novel method for **T**iling genome sequence **AL**ignment using
