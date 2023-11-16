@@ -67,6 +67,7 @@ type+="ont "
 type+="pacbio "
 
 ANALYSER="runexec --read-only-dir / --overlay-dir ."
+GPU_ANALYS="ncu -o profile "
 
 tab="\t"
 total_alg=1001
@@ -163,3 +164,4 @@ done
 
 # rm -f $TEMP_FILE
 cd $CURR_DIR
+

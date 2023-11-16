@@ -29,6 +29,6 @@ for trace in $traces;
 do 
     $RAMULATOR $TRACES_DIR/configs/DDR4-config.cfg --mode=dram  --stats $TRACES_DIR/out_${trace} $TRACES_DIR/memory_${trace}.trace
     $DRAMPower $CURR_DIR/cmd-trace-chan-0-rank-0.cmdtrace /DRAMPower/tests/tests_drampower/resources/ddr4.json > $OUT_FILE
-    echo $(cat $OUT_FILE | parser "TOTAL ENERGY")
+    echo "$(cat $OUT_FILE | parser "TOTAL ENERGY") nJ"
     echo $(cat $TRACES_DIR/out_${trace} | parser "ramulator.ramulator_active_cycles")
 done
