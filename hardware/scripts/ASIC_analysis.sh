@@ -4,6 +4,47 @@ CURR_DIR="$PWD"
 
 which=$1
 
+parser ()
+{
+    in=/dev/stdin
+    file=$1
+    target=$2
+
+    if [[ $target == "Power" ]]; then
+        l=$(grep "Total" $file)
+        count=0
+        for v in $l; do
+            count=$(( $count + 1 ))
+            if [[ $count == 10 ]]; then
+                echo $v
+            fi
+        done
+    fi
+
+    if [[ $target == "Area" ]]; then
+        l=$(grep "Design area" $file)
+        count=0
+        for v in $l; do
+            count=$(( $count + 1 ))
+            if [[ $count == 3 ]]; then
+                echo $v
+            fi
+        done
+    fi
+
+    if [[ $target == "Delay" ]]; then
+        l=$(grep -A 2 "finish critical path slack" $file)
+        count=0
+        for v in $l; do
+            count=$(( $count + 1 ))
+            if [[ $count == 6 ]]; then
+                echo $v
+            fi
+        done
+    fi
+    
+}
+
 OPENROAD_DIR=/OpenROAD-flow-scripts
 SV2V=/dependencies/sv2v/bin/sv2v
 
@@ -39,7 +80,12 @@ if [[ $which == "XDrop" ]]; then
     # yes "" | cp -f $TALCO_XDROP_MKFILE $OPENROAD_DIR/flow/Makefile
 
     cd $OPENROAD_DIR/flow
-    make
+    make &> temp_file
+
+    log_file=logs/nangate45/gcd/base/6_report.log
+    echo "Power: $(parser $log_file Power)"
+    echo "Area:  $(parser $log_file Area)"
+    echo "Delay: $(parser $log_file Delay)"
 
 
     # docker run --rm -it \
@@ -94,5 +140,6 @@ else
 fi
 
 cd $CURR_DIR
+
 
 
