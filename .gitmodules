@@ -16,3 +16,6 @@
 [submodule "software/baselines/libgaba"]
 	path = software/baselines/libgaba
 	url = https://github.com/ocxtal/libgaba.git
+[submodule "software/baselines/BiWFA-paper"]
+	path = software/baselines/BiWFA-paper
+	url = https://github.com/smarco/BiWFA-paper.git
