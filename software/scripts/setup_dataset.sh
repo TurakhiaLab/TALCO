@@ -7,7 +7,7 @@ curr_dir="$PWD"
 pip3 install benchexec coloredlogs
 cd ../../
 git submodule update --init --recursive
-
+cd $curr_dir
 
 
 trash_file="$curr_dir/datasettrash"

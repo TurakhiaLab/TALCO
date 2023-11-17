@@ -13,6 +13,9 @@
 [submodule "hardware/baselines/Darwin-WGA"]
 	path = hardware/baselines/Darwin-WGA
 	url = https://github.com/gsneha26/Darwin-WGA.git
+[submodule "software/baselines/BiWFA-paper"]
+	path = software/baselines/BiWFA-paper
+	url = https://github.com/smarco/BiWFA-paper.git
 [submodule "software/baselines/libgaba"]
 	path = software/baselines/libgaba
 	url = https://github.com/ocxtal/libgaba.git
