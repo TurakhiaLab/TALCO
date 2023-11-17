@@ -1,6 +1,15 @@
 #!/bin/bash
 
 curr_dir="$PWD"
+
+# 
+
+pip3 install benchexec coloredlogs
+cd ../../
+git submodule update --init --recursive
+
+
+
 trash_file="$curr_dir/datasettrash"
 dataset=$PWD/../dataset
 FILENAME=dataset.tar.gz
