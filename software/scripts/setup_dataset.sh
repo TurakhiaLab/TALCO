@@ -9,6 +9,7 @@ cd ../../
 git submodule update --init --recursive
 cd $curr_dir
 
+scl enable devtoolset-11 -- bash
 
 trash_file="$curr_dir/datasettrash"
 dataset=$PWD/../dataset
