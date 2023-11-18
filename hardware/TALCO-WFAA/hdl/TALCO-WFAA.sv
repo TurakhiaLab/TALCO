@@ -1153,4 +1153,4 @@ generate
 		.num_compact(num_compact)
 	);
 */
-endmodule : PEArray
+endmodule : TALCO_WFAA
