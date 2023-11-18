@@ -8,7 +8,7 @@
 #### 1. Use Pre-built Docker image 
 We provide a pre-built docker image with all necessary tools installed in it for baseline evaluation. 
 ```
-docker run -it swalia14/talco:latest
+docker run -it -v /sys/fs/cgroup:/sys/fs/cgroup:rw swalia14/talco:latest
 # Inside Docker
 cd /
 git clone https://github.com/TurakhiaLab/TALCO.git

@@ -1,15 +1,16 @@
 #!/bin/bash
 
 curr_dir="$PWD"
-
+# -v /sys/fs/cgroup:/sys/fs/cgroup:rw
 # 
+
+scl enable devtoolset-11 -- bash
 
 pip3 install benchexec coloredlogs
 cd ../../
 git submodule update --init --recursive
 cd $curr_dir
 
-scl enable devtoolset-11 -- bash
 
 trash_file="$curr_dir/datasettrash"
 dataset=$PWD/../dataset
