@@ -33,7 +33,7 @@ parser ()
     fi
 
     if [[ $target == "Delay" ]]; then
-        l=$(grep -A 2 "finish critical path slack" $file)
+        l=$(grep -A 2 "finish critical path delay" $file)
         count=0
         for v in $l; do
             count=$(( $count + 1 ))
@@ -83,9 +83,9 @@ if [[ $which == "XDrop" ]]; then
     make &> temp_file
 
     log_file=logs/nangate45/gcd/base/6_report.log
-    echo "Power: $(parser $log_file Power)"
-    echo "Area:  $(parser $log_file Area)"
-    echo "Delay: $(parser $log_file Delay)"
+    echo "Power: $(parser $log_file Power) W"
+    echo "Area:  $(parser $log_file Area) mm2"
+    echo "Delay: $(parser $log_file Delay) s"
 
 
     # docker run --rm -it \
