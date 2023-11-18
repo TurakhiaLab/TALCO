@@ -1,15 +1,15 @@
 module TALCO_WFAA #(
-    parameter NUM_EXTEND = 16,
-    parameter MAX_WAVEFRONT_LEN = 64,
-	parameter LOG_MAX_WAVEFRONT_LEN = 8,
+    parameter NUM_EXTEND = 4,
+    parameter MAX_WAVEFRONT_LEN = 32,
+	parameter LOG_MAX_WAVEFRONT_LEN = 5,
     parameter DATA_WIDTH = 8,
     parameter BLOCK_WIDTH = 8,
-    parameter MAX_TILE_SIZE = 1024,
-    parameter LOG_MAX_TILE_SIZE = 10,
-    parameter REF_LEN_WIDTH = 14,
-    parameter QUERY_LEN_WIDTH =14,
-	parameter ADDR_WIDTH = 10,
-	parameter NUM_COMPUTE = 16,
+    parameter MAX_TILE_SIZE = 64,
+    parameter LOG_MAX_TILE_SIZE = 6,
+    parameter REF_LEN_WIDTH = 8,
+    parameter QUERY_LEN_WIDTH =8,
+	parameter ADDR_WIDTH = 8,
+	parameter NUM_COMPUTE = 4,
 	parameter TB_POINTER_WIDTH = 4,
 	parameter SEQ = 16
     )(
@@ -938,7 +938,7 @@ module TALCO_WFAA #(
 
 
     genvar i;
-
+/*
     generate
         for (i = 0; i < NUM_EXTEND; i += 1) 
         begin: eachBRAM_query
@@ -1152,5 +1152,5 @@ generate
 		.compact_cigar(compact_cigar),
 		.num_compact(num_compact)
 	);
-
+*/
 endmodule : PEArray

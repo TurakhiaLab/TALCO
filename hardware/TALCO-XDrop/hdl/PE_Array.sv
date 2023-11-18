@@ -24,11 +24,11 @@ module compute_tb_start #(parameter PE_WIDTH=8,LOG_MAX_TILE_SIZE=10,REF_LEN_WIDT
 endmodule
 module PE_Array #(
     parameter PE_WIDTH = 8,
-    parameter DATA_WIDTH = 16,
+    parameter DATA_WIDTH = 8,
     parameter NUM_BLOCK  = 4,
-    parameter NUM_PE = 2,
+    parameter NUM_PE = 32,
     parameter LOG_NUM_PE = $clog2(NUM_PE),
-    parameter MAX_TILE_SIZE = 16,
+    parameter MAX_TILE_SIZE = 64,
     parameter LOG_MAX_TILE_SIZE = $clog2(MAX_TILE_SIZE),
     parameter REF_LEN_WIDTH = 8,
     parameter QUERY_LEN_WIDTH = 8,

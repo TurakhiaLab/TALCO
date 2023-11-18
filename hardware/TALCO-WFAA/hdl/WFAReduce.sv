@@ -1,9 +1,9 @@
 module WFAReduce #(
-    parameter MAX_WAVEFRONT_LEN = 128,
-    parameter LOG_MAX_TILE_SIZE = 10,
+    parameter MAX_WAVEFRONT_LEN = 32,
+    parameter LOG_MAX_TILE_SIZE = 6,
     parameter DATA_WIDTH = 8,
-    parameter REF_LEN_WIDTH = 14,
-    parameter QUERY_LEN_WIDTH = 14
+    parameter REF_LEN_WIDTH = 8,
+    parameter QUERY_LEN_WIDTH = 8
 )(
     input logic clk,
     input logic rst,

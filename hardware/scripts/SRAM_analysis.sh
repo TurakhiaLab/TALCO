@@ -63,4 +63,4 @@ cd $CURR_DIR
 
 
 
-
+scl enable devtoolset-11 -- bash

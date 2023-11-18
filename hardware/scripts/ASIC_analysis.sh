@@ -33,7 +33,7 @@ parser ()
     fi
 
     if [[ $target == "Delay" ]]; then
-        l=$(grep -A 2 "finish critical path slack" $file)
+        l=$(grep -A 2 "finish critical path delay" $file)
         count=0
         for v in $l; do
             count=$(( $count + 1 ))
@@ -46,7 +46,7 @@ parser ()
 }
 
 OPENROAD_DIR=/OpenROAD-flow-scripts
-SV2V=/dependencies/sv2v/bin/sv2v
+SV2V=/dependencies/sv2v
 
 if [[ $which == "XDrop" ]]; then
     TALCO_XDROP_RTL="$CURR_DIR/../TALCO-XDrop/openroad/rtl"
@@ -83,9 +83,9 @@ if [[ $which == "XDrop" ]]; then
     make &> temp_file
 
     log_file=logs/nangate45/gcd/base/6_report.log
-    echo "Power: $(parser $log_file Power)"
-    echo "Area:  $(parser $log_file Area)"
-    echo "Delay: $(parser $log_file Delay)"
+    echo "Power: $(parser $log_file Power) W"
+    echo "Area:  $(parser $log_file Area) mm2"
+    echo "Delay: $(parser $log_file Delay) s"
 
 
     # docker run --rm -it \
@@ -107,26 +107,64 @@ elif [[ $which == "WFAA" ]]; then
 
     TALCO_WFAA_DIR="$CURR_DIR/../TALCO-WFAA/hdl"
     touch $TALCO_WFAA_SV
-    for file in $TALCO_WFAA_DIR/*; do 
-        if [[ $file != $TALCO_WFAA_DIR/tb.sv ]]; 
-        then
-            cat $file >> $TALCO_WFAA_SV
-            echo "" >> $TALCO_WFAA_SV
-        fi
-    done
 
-    sed -i -e 's/TALCO_WFAA/gcd/g' $TALCO_WFAA_SV
+    POWER=0
+    AREA=0
+    DELAY=0
 
-    # sv to v
-    $SV2V $TALCO_WFAA_SV > $TALCO_WFAA_V 
+    files=""
+    files+="compute_conv "
+    files+="thresholdCalc "
+    files+="traceback "
+    files+="WFAReduce "
+    files+="TALCO-WFAA "
 
-    "yes" | cp -f $TALCO_WFAA_V $OPENROAD_DIR/flow/designs/src/gcd/
-    "yes" | cp -f $TALCO_WFAA_CONFIG $OPENROAD_DIR/flow/designs/nangate45/gcd/
-    "yes" | cp -f $TALCO_WFAA_CONST $OPENROAD_DIR/flow/designs/nangate45/gcd/
-    # yes "" | cp -f $TALCO_WFAA_MKFILE $OPENROAD_DIR/flow/Makefile
+    for file in $files;do
+        echo "Working .. $file" 
+        cat $file > $TALCO_WFAA_SV
+        sed -i -e "s/$file/gcd/g" $TALCO_WFAA_SV
+        $SV2V $TALCO_WFAA_SV > $TALCO_WFAA_V 
+        "yes" | cp -f $TALCO_WFAA_V $OPENROAD_DIR/flow/designs/src/gcd/
+        "yes" | cp -f $TALCO_WFAA_CONFIG $OPENROAD_DIR/flow/designs/nangate45/gcd/
+        "yes" | cp -f $TALCO_WFAA_CONST $OPENROAD_DIR/flow/designs/nangate45/gcd/
+        cd $OPENROAD_DIR/flow
+        make &> temp_file
 
-    cd $OPENROAD_DIR/flow
-    make
+        log_file=logs/nangate45/gcd/base/6_report.log
+        echo "Power: $(parser $log_file Power) W"
+        echo "Area:  $(parser $log_file Area) mm2"
+        echo "Delay: $(parser $log_file Delay) s"
+
+    # for file in $TALCO_WFAA_DIR/*; do 
+    #     if [[ $file != $TALCO_WFAA_DIR/tb.sv ]]; 
+    #     then
+    #         cat $file >> $TALCO_WFAA_SV
+    #         echo "" >> $TALCO_WFAA_SV
+
+    #         sed -i -e 's/TALCO_WFAA/gcd/g' $TALCO_WFAA_SV
+
+    #         # sv to v
+    #         $SV2V $TALCO_WFAA_SV > $TALCO_WFAA_V 
+
+    #         "yes" | cp -f $TALCO_WFAA_V $OPENROAD_DIR/flow/designs/src/gcd/
+    #         "yes" | cp -f $TALCO_WFAA_CONFIG $OPENROAD_DIR/flow/designs/nangate45/gcd/
+    #         "yes" | cp -f $TALCO_WFAA_CONST $OPENROAD_DIR/flow/designs/nangate45/gcd/
+    #         # yes "" | cp -f $TALCO_WFAA_MKFILE $OPENROAD_DIR/flow/Makefile
+
+    #         cd $OPENROAD_DIR/flow
+    #         make &> temp_file
+
+    #         log_file=logs/nangate45/gcd/base/6_report.log
+    #         echo "Power: $(parser $log_file Power) W"
+    #         echo "Area:  $(parser $log_file Area) mm2"
+    #         echo "Delay: $(parser $log_file Delay) s"
+
+    #     fi
+    # done
+
+    
+
+    
 
     # docker run --rm -it \
     #     -v $TALCO_WFAA_RTL:/OpenROAD-flow-scripts/flow/designs/src/gcd \
