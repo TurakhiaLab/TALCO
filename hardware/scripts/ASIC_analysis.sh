@@ -95,7 +95,9 @@ if [[ $which == "XDrop" ]]; then
     #     openroad/flow-centos7-builder:latest
 
 elif [[ $which == "WFAA" ]]; then
+
     TALCO_WFAA_RTL="$CURR_DIR/../TALCO-WFAA/openroad/rtl"
+    TALCO_WFAA_ORIG_RTL="$CURR_DIR/../TALCO-WFAA/hdl"
     mkdir -p $TALCO_WFAA_RTL
     TALCO_WFAA_SV="$TALCO_WFAA_RTL/gcd.sv"
     TALCO_WFAA_V="$TALCO_WFAA_RTL/gcd.v"
@@ -114,14 +116,18 @@ elif [[ $which == "WFAA" ]]; then
 
     files=""
     files+="compute_conv "
-    files+="thresholdCalc "
+    # files+="thresholdCalc "
     files+="traceback "
-    files+="WFAReduce "
-    files+="TALCO-WFAA "
+    # files+="WFAReduce "
+    # files+="TALCO-WFAA "
+
+    POWER=0
+    AREA=0
+    DELAY=0
 
     for file in $files;do
         echo "Working .. $file" 
-        cat $file > $TALCO_WFAA_SV
+        cat $TALCO_WFAA_ORIG_RTL/$file.sv > $TALCO_WFAA_SV
         sed -i -e "s/$file/gcd/g" $TALCO_WFAA_SV
         $SV2V $TALCO_WFAA_SV > $TALCO_WFAA_V 
         "yes" | cp -f $TALCO_WFAA_V $OPENROAD_DIR/flow/designs/src/gcd/
@@ -131,9 +137,23 @@ elif [[ $which == "WFAA" ]]; then
         make &> temp_file
 
         log_file=logs/nangate45/gcd/base/6_report.log
-        echo "Power: $(parser $log_file Power) W"
-        echo "Area:  $(parser $log_file Area) mm2"
-        echo "Delay: $(parser $log_file Delay) s"
+        p=$(printf "%.14f" $(parser $log_file Power))
+        ar=$(printf "%.14f" $(parser $log_file Area))
+        se=$(printf "%.14f" $(parser $log_file Delay))
+    
+        if [[ $file == "compute_conv" ]]; then
+            p=$(echo "scale=4; $a*16" | bc)
+            ar=$(echo "scale=4; $ar*16" | bc)
+        fi
+        POWER=$(echo "$POWER + $p"  | bc)
+        AREA=$(echo "$AREA + $ar" | bc)
+        if [[ $se > $DELAY ]]; then
+            DELAY=$se
+        fi
+
+        echo "Power: $p W"
+        echo "Area:  $ar mm2"
+        echo "Delay: $se s"
 
     # for file in $TALCO_WFAA_DIR/*; do 
     #     if [[ $file != $TALCO_WFAA_DIR/tb.sv ]]; 
@@ -160,8 +180,11 @@ elif [[ $which == "WFAA" ]]; then
     #         echo "Delay: $(parser $log_file Delay) s"
 
     #     fi
-    # done
+    done
 
+    echo "Total Power: $POWER W"
+    echo "Total Area:  $AREA mm2"
+    echo "Critical Path Delay: $DELAY s"
     
 
     
