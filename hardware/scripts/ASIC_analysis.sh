@@ -46,7 +46,7 @@ parser ()
 }
 
 OPENROAD_DIR=/OpenROAD-flow-scripts
-SV2V=/dependencies/sv2v/bin/sv2v
+SV2V=/dependencies/sv2v
 
 if [[ $which == "XDrop" ]]; then
     TALCO_XDROP_RTL="$CURR_DIR/../TALCO-XDrop/openroad/rtl"
