@@ -66,7 +66,8 @@ type=""
 type+="ont "
 type+="pacbio "
 
-ANALYSER="runexec --read-only-dir / --overlay-dir ."
+# ANALYSER="runexec --read-only-dir / --overlay-dir . --no-container"
+ANALYSER="runexec --read-only-dir / --overlay-dir . --no-container"
 GPU_ANALYS="ncu -o profile "
 
 tab="\t"
