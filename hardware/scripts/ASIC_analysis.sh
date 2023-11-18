@@ -142,8 +142,8 @@ elif [[ $which == "WFAA" ]]; then
         se=$(printf "%.14f" $(parser $log_file Delay))
     
         if [[ $file == "compute_conv" ]]; then
-            p=$(echo "scale=4; $a*16" | bc)
-            ar=$(echo "scale=4; $ar*16" | bc)
+            p=$(echo "$p*16" | bc)
+            ar=$(echo "$ar*16" | bc)
         fi
         POWER=$(echo "$POWER + $p"  | bc)
         AREA=$(echo "$AREA + $ar" | bc)
