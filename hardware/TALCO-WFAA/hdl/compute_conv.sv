@@ -1,8 +1,8 @@
 module compute_conv #(
-    parameter MAX_WAVEFRONT_LEN = 128,
-    parameter LOG_MAX_WAVEFRONT_LEN = 8,
-    parameter LOG_MAX_TILE_SIZE = 10,
-    parameter MAX_TILE_SIZE = 1024,
+    parameter MAX_WAVEFRONT_LEN = 32,
+    parameter LOG_MAX_WAVEFRONT_LEN = 5,
+    parameter LOG_MAX_TILE_SIZE = 6,
+    parameter MAX_TILE_SIZE = 64,
 	parameter TB_POINTER_WIDTH = 4,
 	parameter DATA_WIDTH = 8
 )(

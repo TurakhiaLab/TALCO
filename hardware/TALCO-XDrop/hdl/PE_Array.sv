@@ -24,7 +24,7 @@ module compute_tb_start #(parameter PE_WIDTH=8,LOG_MAX_TILE_SIZE=10,REF_LEN_WIDT
 endmodule
 module PE_Array #(
     parameter PE_WIDTH = 8,
-    parameter DATA_WIDTH = 16,
+    parameter DATA_WIDTH = 8,
     parameter NUM_BLOCK  = 4,
     parameter NUM_PE = 32,
     parameter LOG_NUM_PE = $clog2(NUM_PE),

@@ -21,11 +21,11 @@
 
 
 module traceback #(
-    parameter MAX_WAVEFRONT_LEN = 256,
-	parameter LOG_MAX_WAVEFRONT_LEN = 8,
-    parameter MAX_TILE_SIZE = 1024,
-    parameter LOG_MAX_TILE_SIZE = 10,
-	parameter ADDR_WIDTH = 10,
+    parameter MAX_WAVEFRONT_LEN = 32,
+	parameter LOG_MAX_WAVEFRONT_LEN = 5,
+    parameter MAX_TILE_SIZE = 64,
+    parameter LOG_MAX_TILE_SIZE = 6,
+	parameter ADDR_WIDTH = 8,
 	parameter DATA_WIDTH = 8
 )(
 input clk,
