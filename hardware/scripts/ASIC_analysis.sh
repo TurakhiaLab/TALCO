@@ -119,7 +119,7 @@ elif [[ $which == "WFAA" ]]; then
     files+="thresholdCalc "
     files+="traceback "
     files+="WFAReduce "
-    files+="TALCO-WFAA "
+    files+="TALCO_WFAA "
 
     POWER=0
     AREA=0
