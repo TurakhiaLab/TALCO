@@ -83,9 +83,14 @@ if [[ $which == "XDrop" ]]; then
     make &> temp_file
 
     log_file=logs/nangate45/gcd/base/6_report.log
-    echo "Power: $(parser $log_file Power) W"
-    echo "Area:  $(parser $log_file Area) mm2"
-    echo "Delay: $(parser $log_file Delay) s"
+    POWER=$(parser $log_file Power)
+    AREA=$(parser $log_file Area)
+    DELAY=$(parser $log_file Delay)
+    
+    echo "Power: $(echo "$POWER*32" | bc) W"
+    echo "Area:  $(echo "$AREA*32" | bc) um2"
+    echo "Delay: $DELAY s"
+
 
 
     # docker run --rm -it \
