@@ -80,7 +80,7 @@ if [[ $which == "XDrop" ]]; then
     # yes "" | cp -f $TALCO_XDROP_MKFILE $OPENROAD_DIR/flow/Makefile
 
     cd $OPENROAD_DIR/flow
-    make &> temp_file
+    make
 
     log_file=logs/nangate45/gcd/base/6_report.log
     POWER=$(parser $log_file Power)
@@ -89,7 +89,7 @@ if [[ $which == "XDrop" ]]; then
     
     echo "Power: $(echo "$POWER*32" | bc) W"
     echo "Area:  $(echo "$AREA*32" | bc) um2"
-    echo "Delay: $DELAY s"
+    echo "Delay: $DELAY ns"
 
 
 
@@ -139,7 +139,7 @@ elif [[ $which == "WFAA" ]]; then
         "yes" | cp -f $TALCO_WFAA_CONFIG $OPENROAD_DIR/flow/designs/nangate45/gcd/
         "yes" | cp -f $TALCO_WFAA_CONST $OPENROAD_DIR/flow/designs/nangate45/gcd/
         cd $OPENROAD_DIR/flow
-        make &> temp_file
+        make
 
         log_file=logs/nangate45/gcd/base/6_report.log
         p=$(printf "%.14f" $(parser $log_file Power))
@@ -157,8 +157,8 @@ elif [[ $which == "WFAA" ]]; then
         fi
 
         echo "Power: $p W"
-        echo "Area:  $ar mm2"
-        echo "Delay: $se s"
+        echo "Area:  $ar um2"
+        echo "Delay: $se ns"
 
     # for file in $TALCO_WFAA_DIR/*; do 
     #     if [[ $file != $TALCO_WFAA_DIR/tb.sv ]]; 
