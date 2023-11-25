@@ -3,20 +3,20 @@
 CURR_DIR="$PWD"
 BASELINE_DIR="$CURR_DIR/.."
 
-edlib=baselines/edlib/build/bin/edlib-aligner
+edlib=baselines/common/edlib
 wadapt=baselines/common/wadapt
-biwfa=baselines/BiWFA-paper/bin/align_benchmark
+biwfa=baselines/common/biwfa
 scrooge=baselines/common/scrooge_cpu
 libgaba=baselines/common/libgaba
 
-edlib_p=baselines/edlib/build/bin/edlib_p
+edlib_p=baselines/common/edlib_p
 wadapt_p=baselines/common/wadapt_p
 biwfa_p=baselines/common/BiWFA_p
 scrooge_p=baselines/common/scrooge_cpu_p
 libgaba_p=baselines/common/libgaba_p
 
 scrooge_gpu=baselines/common/scrooge_gpu
-darwin_dir=$BASELINE_DIR/baselines/darwin-gpu
+darwin_dir=baselines/common
 darwin_gpu=./darwin
 
 talco_xdrop=TALCO-XDrop/build/TALCO-XDrop
