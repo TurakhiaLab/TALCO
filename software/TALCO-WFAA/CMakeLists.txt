@@ -114,7 +114,6 @@ set(wfa2lib_SOURCE
   wavefront/wavefront_unialign.c
 )
 
-find_package(TBB REQUIRED)
 
 add_library(wfa
     ${wfa2lib_SOURCE}

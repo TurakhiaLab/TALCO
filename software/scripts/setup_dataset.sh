@@ -3,7 +3,7 @@
 curr_dir="$PWD"
 
 trash_file="$curr_dir/datasettrash"
-dataset=$PWD/../dataset
+dataset=$PWD/../../dataset
 FILENAME=dataset.tar.gz
 cd ../
 rm -rf $dataset
