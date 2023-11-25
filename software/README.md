@@ -4,7 +4,8 @@
 1. **gcc:** At least support for `C++ 17` and OpenMP, tested with `g++ 10.3`
 2. **cmake:** `3.16.3`
 3. **nvcc**
-3. **Docker**
+4. **Docker**
+5. **python3-pip**
 
 <!-- #### 1. Use Pre-built Docker image 
 We provide a pre-built docker image with all necessary tools installed in it for baseline evaluation. 
@@ -18,7 +19,7 @@ cd TALCO/software
 
 #### Clone TALCO repository
 ```
-git clone https://github.com/TurakhiaLab/TALCO.git
+git clone --recursive https://github.com/TurakhiaLab/TALCO.git
 cd TALCO/software
 ```
 
@@ -51,7 +52,7 @@ source setup_dataset.sh
 ```
 * Compute memory footprint of TALCO-XDrop, TALCO-WFAA, and baseline tools executing on single-CPU thread
 ``` 
-sudo ./analysis.sh mem
+./analysis.sh mem
 ```
 
 * Compute throughput of all software baseline tools executing on 32 CPU threads

@@ -5,7 +5,7 @@ BASELINE_DIR="$CURR_DIR/.."
 
 edlib=baselines/edlib/build/bin/edlib-aligner
 wadapt=baselines/common/wadapt
-biwfa=baselines/common/align_benchmark
+biwfa=baselines/BiWFA-paper/bin/align_benchmark
 scrooge=baselines/common/scrooge_cpu
 libgaba=baselines/common/libgaba
 
@@ -16,7 +16,7 @@ scrooge_p=baselines/common/scrooge_cpu_p
 libgaba_p=baselines/common/libgaba_p
 
 scrooge_gpu=baselines/common/scrooge_gpu
-darwin_dir=baselines/common
+darwin_dir=../baselines/common
 darwin_gpu=./darwin
 
 talco_xdrop=TALCO-XDrop/build/TALCO-XDrop
@@ -46,7 +46,7 @@ else
     tool+=""
 fi
 
-DATASET_DIR="$CURR_DIR/../dataset"
+DATASET_DIR="$CURR_DIR/../../dataset"
 TEMP_FILE="$CURR_DIR/temp"
 touch $TEMP_FILE
 
