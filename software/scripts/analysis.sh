@@ -3,13 +3,13 @@
 CURR_DIR="$PWD"
 BASELINE_DIR="$CURR_DIR/.."
 
-edlib=baselines/common/edlib
+edlib=baselines/edlib/build/bin/edlib-aligner
 wadapt=baselines/common/wadapt
-biwfa=baselines/common/biwfa
+biwfa=baselines/common/align_benchmark
 scrooge=baselines/common/scrooge_cpu
 libgaba=baselines/common/libgaba
 
-edlib_p=baselines/common/edlib_p
+edlib_p=baselines/edlib/build/bin/edlib_p
 wadapt_p=baselines/common/wadapt_p
 biwfa_p=baselines/common/BiWFA_p
 scrooge_p=baselines/common/scrooge_cpu_p
@@ -67,7 +67,7 @@ type+="ont "
 type+="pacbio "
 
 # ANALYSER="runexec --read-only-dir / --overlay-dir . --no-container"
-ANALYSER="runexec --read-only-dir / --overlay-dir . --no-container"
+ANALYSER="runexec --read-only-dir / --overlay-dir ."
 GPU_ANALYS="ncu -o profile "
 
 tab="\t"
@@ -85,14 +85,14 @@ parser()
 
     for v in $out; 
     do
-        if [[ $text == $check ]];
-        then
-            if (( $count == 0 ));
-            then
-                count=$(( $count + 1 ))
-                continue
-            fi
-        fi
+        # if [[ $text == $check ]];
+        # then
+        #     if (( $count == 0 ));
+        #     then
+        #         count=$(( $count + 1 ))
+        #         continue
+        #     fi
+        # fi
         val=$(echo $v | awk -F"$unit" '{print $1}')
         if (( $(echo "$val > $max" |bc -l) ));
         then
