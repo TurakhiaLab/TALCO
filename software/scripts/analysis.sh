@@ -16,7 +16,7 @@ scrooge_p=baselines/common/scrooge_cpu_p
 libgaba_p=baselines/common/libgaba_p
 
 scrooge_gpu=baselines/common/scrooge_gpu
-darwin_dir=../baselines/common
+darwin_dir=$PWD/../baselines/darwin-gpu
 darwin_gpu=./darwin
 
 talco_xdrop=TALCO-XDrop/build/TALCO-XDrop
