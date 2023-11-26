@@ -20,11 +20,12 @@ cd TALCO/software
 #### Clone TALCO repository
 ```
 git clone --recursive https://github.com/TurakhiaLab/TALCO.git
-cd TALCO/software
+cd TALCO/software/scripts
 ```
 
 #### Install Dependencies
 ```
+cd TALCO/software/scripts
 sudo ./install_dependencies.sh
 ```
 
