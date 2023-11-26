@@ -8,33 +8,29 @@ docker run -it swalia14/talco:latest
 # Inside Docker
 cd /
 git clone https://github.com/TurakhiaLab/TALCO.git
-cd TALCO/hardware
+cd TALCO/hardware/scripts
 ```
 
 #### 2. System Verilog to Verilog Conversion (Not required if using Docker Image)
 
 OpenROAD only supports Verilog; therefore, we use [sv2v](https://github.com/zachjs/sv2v.git) to convert our codebase in System-verilog to Verilog. Use the following command to install [sv2v](https://github.com/zachjs/sv2v.git):
 ```
-cd scripts
 source install_dependecies.sh
 ```
 
 #### 3. ASIC Analysis
 1. Use the following commands to generate Area, Power, and Critical path delay of the designs using [OpenROAD-flow-scripts](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/tree/master):
 ```
-cd scripts
 source ASIC_analysis.sh [XDrop/WFAA]
 ```
 
 2. SRAM Power analysis using [OpenRAM](https://github.com/VLSIDA/OpenRAM/tree/stable)
 ```
-cd scripts
 source SRAM_analysis.sh
 ```
 
 3. DRAM Power and Cycle count analysis using [DRAMPower](https://github.com/tukl-msd/DRAMPower)
 ```
-cd scripts
 source DRAM_analysis.sh
 ```
 

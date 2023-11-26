@@ -25,30 +25,24 @@ cd TALCO/software/scripts
 
 #### Install Dependencies
 ```
-cd TALCO/software/scripts
 sudo ./install_dependencies.sh
 ```
 
 #### TALCO-XDrop and TALCO-WFAA
 Visit [TALCO-XDrop](TALCO-XDrop/) and [TALCO-WFAA](TALCO-WFAA/) for implementation and usage. Use the following commands to build TALCO-XDrop and TALCO-WFAA.
 ```
-cd scripts
 source build_TALCO.sh make
-cd ..
 ```
 
 #### Baseline Tools
 We have used [Libgaba](https://github.com/ocxtal/libgaba), [WFA-Adapt](https://github.com/smarco/WFA2-lib), [Edlib](https://github.com/Martinsos/edlib), [BiWFA](https://github.com/smarco/BiWFA-paper), [Scrooge](https://github.com/CMU-SAFARI/Scrooge), and [Darwin-GPU](https://github.com/Tongdongq/darwin-gpu) as software baselines. Use the following commands to build the baseline tools. 
 ```
-cd scripts
 source build_baseline.sh make
-cd ..
 ```
 
 #### Analysis
 * Setup dataset
 ```
-cd scripts
 source setup_dataset.sh
 ```
 * Compute memory footprint of TALCO-XDrop, TALCO-WFAA, and baseline tools executing on single-CPU thread
