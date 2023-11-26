@@ -20,11 +20,12 @@ cd TALCO/software
 #### Clone TALCO repository
 ```
 git clone --recursive https://github.com/TurakhiaLab/TALCO.git
-cd TALCO/software
+cd TALCO/software/scripts
 ```
 
 #### Install Dependencies
 ```
+cd TALCO/software/scripts
 sudo ./install_dependencies.sh
 ```
 
@@ -57,10 +58,10 @@ source setup_dataset.sh
 
 * Compute throughput of all software baseline tools executing on 32 CPU threads
 ``` 
-sudo ./analysis.sh thp
+./analysis.sh thp
 ```
 
 * Compute throughput/watt of Libgaba and WFA-Adapt algorithms executing on 32 CPU threads
 ``` 
-sudo ./analysis.sh thp/w
+./analysis.sh thp/w
 ```
