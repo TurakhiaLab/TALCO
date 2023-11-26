@@ -83,7 +83,7 @@ if [[ $which == "XDrop" ]]; then
     make
 
     log_file=logs/nangate45/gcd/base/6_report.log
-    POWER=$(parser $log_file Power)
+    POWER=$(printf "%.14f" $(parser $log_file Power))
     AREA=$(parser $log_file Area)
     DELAY=$(parser $log_file Delay)
     
@@ -114,10 +114,6 @@ elif [[ $which == "WFAA" ]]; then
 
     TALCO_WFAA_DIR="$CURR_DIR/../TALCO-WFAA/hdl"
     touch $TALCO_WFAA_SV
-
-    POWER=0
-    AREA=0
-    DELAY=0
 
     files=""
     files+="compute_conv "
