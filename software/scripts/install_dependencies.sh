@@ -7,7 +7,7 @@ mkdir -p $DEPEND_DIR
 cd $DEPEND_DIR
 
 apt install build-essential
-
+apt install nvidia-cuda-toolkit
 apt-get install libboost-all-dev
 apt-get install pkg-config
 
