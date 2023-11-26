@@ -57,10 +57,10 @@ source setup_dataset.sh
 
 * Compute throughput of all software baseline tools executing on 32 CPU threads
 ``` 
-sudo ./analysis.sh thp
+./analysis.sh thp
 ```
 
 * Compute throughput/watt of Libgaba and WFA-Adapt algorithms executing on 32 CPU threads
 ``` 
-sudo ./analysis.sh thp/w
+./analysis.sh thp/w
 ```
