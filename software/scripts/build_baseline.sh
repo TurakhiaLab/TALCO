@@ -41,6 +41,7 @@ then
     # Darwin-GPU
     echo "Building Darwin-GPU...."
     cd "$baseline_dir/darwin-gpu"
+    cp ../common/darwin-gpu/Makefile .
     ./z_compile.sh GPU &>> $trash_file
 
 
