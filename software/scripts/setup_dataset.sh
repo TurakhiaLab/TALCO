@@ -1,11 +1,11 @@
 #!/bin/bash
 
 curr_dir="$PWD"
-
+TALCO_HOME=../../
 trash_file="$curr_dir/datasettrash"
 dataset=$PWD/../../dataset
 FILENAME=dataset.tar.gz
-cd ../
+cd $TALCO_HOME
 rm -rf $dataset
 
 # Download dataset
