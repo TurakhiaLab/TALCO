@@ -23,7 +23,7 @@ module compute_tb_start #(parameter PE_WIDTH=8,LOG_MAX_TILE_SIZE=10,REF_LEN_WIDT
     end
 endmodule
 module PE_Array #(
-    parameter PE_WIDTH = 8,
+    parameter PE_WIDTH = 7,
     parameter DATA_WIDTH = 8,
     parameter NUM_BLOCK  = 4,
     parameter NUM_PE = 32,
