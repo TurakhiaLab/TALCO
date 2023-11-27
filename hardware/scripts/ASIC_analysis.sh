@@ -87,6 +87,7 @@ if [[ $which == "XDrop" ]]; then
     AREA=$(parser $log_file Area)
     DELAY=$(parser $log_file Delay)
     
+    echo "===== Results for 32x32 PEs ====="
     echo "Power: $(echo "$POWER*32" | bc) W"
     echo "Area:  $(echo "$AREA*32" | bc) um2"
     echo "Delay: $DELAY ns"
@@ -182,9 +183,12 @@ elif [[ $which == "WFAA" ]]; then
 
     #     fi
     done
+    
 
-    echo "Total Power: $POWER W"
-    echo "Total Area:  $AREA mm2"
+
+    echo "===== Results for 16x(16 Extend, 16 Compute) ====="
+    echo "Total Power: $(echo "$Power*16" | bc) W"
+    echo "Total Area:  $(echo "$AREA*16" | bc) mm2"
     echo "Critical Path Delay: $DELAY s"
     
 

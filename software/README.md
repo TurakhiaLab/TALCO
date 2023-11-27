@@ -16,6 +16,8 @@ cd /
 git clone https://github.com/TurakhiaLab/TALCO.git
 cd TALCO/software
 ``` -->
+#### Note
+Please **don't** use docker/VM to perform software analysis as Benchexec doesn't work with them.
 
 #### Clone TALCO repository
 ```
