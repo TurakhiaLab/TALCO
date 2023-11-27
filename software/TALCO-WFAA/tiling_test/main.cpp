@@ -62,7 +62,7 @@ int main(int argc, char* argv[]){
     attributes.alignment_form.pattern_end_free = 1;
     attributes.alignment_form.text_begin_free = 0;
     attributes.alignment_form.text_end_free = 1;
-  attributes.memory_mode = wavefront_memory_low;
+  attributes.memory_mode = wavefront_memory_mid;
 
   // Initialize Wavefront Aligner
   wavefront_aligner_t* const wf_aligner = wavefront_aligner_new(&attributes);
