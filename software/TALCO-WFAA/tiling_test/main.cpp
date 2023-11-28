@@ -62,7 +62,7 @@ int main(int argc, char* argv[]){
     attributes.alignment_form.pattern_end_free = 1;
     attributes.alignment_form.text_begin_free = 0;
     attributes.alignment_form.text_end_free = 1;
-  attributes.memory_mode = wavefront_memory_mid;
+  attributes.memory_mode = wavefront_memory_med;
 
   // Initialize Wavefront Aligner
   wavefront_aligner_t* const wf_aligner = wavefront_aligner_new(&attributes);
@@ -122,6 +122,7 @@ int main(int argc, char* argv[]){
         free(cigar);
         printf("%d\t%d\t%d\t%f\t%d\t%d\t%d\n", counts.match_count,counts.mismatch_count,counts.indel_count,counts.error_rate,
             stats.longest_wavefront,stats.post_marking_cells,stats.pre_marking_cells);
+    	break;
     }
 
 }
