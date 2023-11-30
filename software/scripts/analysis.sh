@@ -25,12 +25,12 @@ talco_wfaa=TALCO-WFAA/build/TALCO-WFAA
 
 tools=""
 if [[ $1 == "mem" ]]; then
-    tools+="$edlib "
-    tools+="$libgaba "
+    # tools+="$edlib "
+    # tools+="$libgaba "
     tools+="$wadapt "
-    tools+="$biwfa "
-    tools+="$talco_xdrop "
-    tools+="$talco_wfaa "
+    # tools+="$biwfa "
+    # tools+="$talco_xdrop "
+    # tools+="$talco_wfaa "
 elif [[ $1 == "thp" ]]; then
     tools+="$edlib_p "
     tools+="$libgaba_p "
@@ -109,7 +109,7 @@ parser()
     elif [[ $1 == "thp" ]]; then
         echo "$(bc -l <<< "scale=2; $total_alg/$max") Alignments/sec"
     elif [[ $1 == "thp/w" ]]; then
-        echo "$(bc -l <<< "scale=2; $max") Throughput/Watt"
+        echo "$(bc -l <<< "scale=2; $max")"
     fi
 }
 
@@ -137,7 +137,7 @@ do
 
                 elif [ $tool == $biwfa ] || [ $tool == $biwfa_p ];
                 then
-                    $ANALYSER -- $BASELINE_DIR/$tool -i $file_path/${t}_biwfa.fa --affine-penalties 0,3,6,1 --wfa-score-only &> $TEMP_FILE
+                    $ANALYSER -- $BASELINE_DIR/$tool -i $file_path/${t}_biwfa.fa &> $TEMP_FILE
                 elif [[ $tool == $darwin_gpu ]]; then
                     cd $darwin_dir
                     $ANALYSER -- $tool  $file_path/${t}_darwingpu_ref.fa $file_path/${t}_darwingpu_query.fa 8 32 64 &> $TEMP_FILE
@@ -155,7 +155,11 @@ do
                 elif [[ $1 == "thp" ]]; then
                     printf '%s\t%s\t\n' "$(basename $tool) $(cat $TEMP_FILE | parser  $1 "cputime" "s")"      
                 elif [[ $1 == "thp/w" ]]; then
-                    printf '%s\t%s\t\n' "$(basename $tool) $(cat $TEMP_FILE | parser  $1 "cpuenergy" "s")"      
+			        THP=$(cat $TEMP_FILE | parser  $1 "cputime" "s")
+                    EN=$(cat $TEMP_FILE | parser  $1 "cpuenergy" "s")
+                    # echo $THP 
+                    # echo $EN
+                    printf '%s\t%s\t\n' "$(basename $tool) "$(bc -l <<< "scale=2; $THP/$EN")" Throughput/Watt"      
                 fi
                 # printf '%s\t%s\t%s\t%s\n' "$(basename $tool) $(cat $TEMP_FILE | parser "memory=" "B") $(cat $TEMP_FILE | parser "cpuenergy" "J") $(cat $TEMP_FILE | parser "cputime"   "s")"        
             done
