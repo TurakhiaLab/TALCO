@@ -28,6 +28,7 @@ then
     # BiWFA
     echo "Building WFA-BiWFA...."
     cd "$baseline_dir/BiWFA-paper"
+    cp ../common/src/align_benchmark.c tools/align_benchmark/align_benchmark.c
     make &>> $trash_file
 
     # Scrooge
