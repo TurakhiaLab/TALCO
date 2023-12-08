@@ -4,7 +4,7 @@
 [license-link]: https://github.com/TurakhiaLab/TALCO/blob/main/LICENSE
 
 [![License][license-badge]][license-link]
-[![Published ](https://img.shields.io/badge/Accepted_in-HPCA_2024-blue.svg)](https://www.nature.com/articles/s41588-021-00862-7)
+[![Published ](https://img.shields.io/badge/Accepted_in-HPCA_2024-blue.svg)](https://github.com/TurakhiaLab/TALCO)
 
 
 <div align="center">
