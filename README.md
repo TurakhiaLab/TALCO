@@ -4,7 +4,7 @@
 [license-link]: https://github.com/TurakhiaLab/TALCO/blob/main/LICENSE
 
 [![License][license-badge]][license-link]
-[![Published ](https://img.shields.io/badge/Accepted_in-HPCA_2024-green.svg)]([https://github.com/TurakhiaLab/TALCO](https://www.hpca-conf.org/2024/)
+[![Published ](https://img.shields.io/badge/Accepted_in-HPCA_2024-green.svg)](https://www.hpca-conf.org/2024/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10306077.svg)](https://doi.org/10.5281/zenodo.10306077)
 
 <div align="center">
