@@ -42,7 +42,7 @@ This repository contains CPU and ASIC implementations of TALCO-XDrop and TALCO-W
 ## **Citing TALCO**
 
 If you use **TALCO** in your work, please cite the following paper:
-* Sumit Walia, Cheng Ye, Arkid Bera, Dhruvi Lodhavia, Yatish Turakhia, "*TALCO: Tiling Genome Sequence Alignment using Convergence of Traceback Pointers*", In 2024 IEEE International Symposium on High-Performance Computer Architecture (**HPCA**), [[Paper](paper/TALCO.pdf)].
+* Sumit Walia, Cheng Ye, Arkid Bera, Dhruvi Lodhavia, Yatish Turakhia, "*TALCO: Tiling Genome Sequence Alignment using Convergence of Traceback Pointers*", In 2024 IEEE International Symposium on High-Performance Computer Architecture (**HPCA**), [[Paper](paper/TALCO.pdf)][[Video](https://www.youtube.com/watch?v=lPZ_WxTJiNw)].
 
 ## **Getting Help**
 We appreciate any feedback and suggestions. Feel free to raise an issue or submit a pull request on GitHub or contact Sumit Walia (swalia AT ucsd DOT edu).
