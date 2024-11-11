@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <fstream>
+#include <algorithm>
 #include <vector>
 #include <ctime>
 #include <unordered_map>
@@ -21,10 +22,13 @@ int Talco_xdrop::Score (
     int ridx = ref_idx, qidx = query_idx;
     int m = 0,mm= 0,go=0,ge=0;
     // printf ("aln: %d %d %d\n",aln.size(), ref_idx, query_idx);
+    std::string rtest, qtest;
     for (int i = aln.size() - 1; i >= 0; i--){
         int8_t state = aln[i];	
         // printf ("state %d, ri %d, qi %d", state, ridx, qidx);
-        if (state == 0) { // Current State M	
+        if (state == 0) { // Current State M
+            rtest.push_back(reference[ridx]);	
+            qtest.push_back(query[qidx]);	
             if (reference[ridx] == query[qidx]){	
                 score += params.match;
                 m++;	
@@ -35,6 +39,8 @@ int Talco_xdrop::Score (
             ridx--;	
             qidx--;	
         } else if (state == 1) { // Current State I	
+            rtest.push_back('-');	
+            qtest.push_back(query[qidx]);
             if (i < aln.size() - 1 && aln[i+1] == 1) {	
                 score += params.gapExtend;
                 ge++;	
@@ -45,6 +51,8 @@ int Talco_xdrop::Score (
             qidx--;	
 
         } else { // Current State D	
+            rtest.push_back(reference[ridx]);	
+            qtest.push_back('-');
             if (i < aln.size() - 1 && aln[i+1] == 2) {	
                 score += params.gapExtend;	
                 ge++;	
@@ -56,8 +64,11 @@ int Talco_xdrop::Score (
         }	
         // printf(" Score: %d\n", score);
     }
+    std::reverse(rtest.begin(), rtest.end());
+    std::reverse(qtest.begin(), qtest.end());
     // printf("count %d %d %d %d, ridx %d, qidx %d\n", m, mm, go ,ge, ridx, qidx);
-
+    std::cout << rtest << std::endl;
+    std::cout << qtest << std::endl;
     return score;
     
 }
@@ -88,7 +99,7 @@ void Talco_xdrop::Align (
             int tile = 0;
             while (!last_tile) {
                 std::vector<int8_t> tile_aln;
-                // std::cout << "TIle: " << tile << " state:" << (state&&0xFF) << std::endl;
+                std::cout << "TIle: " << tile << " state:" << (state&&0xFF) << std::endl;
                 Talco_xdrop::Tile(reference[n], query[n], params, reference_idx, query_idx, tile_aln, state, last_tile, tile);
                 for (int i= tile_aln.size()-1; i>=0; i--){
                     if (i == tile_aln.size()-1 && tile>0){
@@ -328,8 +339,11 @@ void Talco_xdrop::Tile (
             exit(1); 
         }
 
+
         for (int32_t k = 0; k < reference_length + query_length - 1; k++){
-            // printf("k: %d\n", k);
+
+            std::cout << "ftr length: " << U[k%3] << "-" << L[k%3] << " k: " << k  << "R-Q" << reference_length << "-" << query_length << std::endl;
+            
             if (L[k%3] >= U[k%3]+1) { // No more cells to compute based on x-drop critieria
                 std::cout << "No more cells to compute based on x-drop critieria" << std::endl;
                 break;
@@ -344,13 +358,14 @@ void Talco_xdrop::Tile (
                 ftr_length.push_back(U[k%3] - L[k%3] + 1);
                 ftr_lower_limit.push_back(L[k%3]);
                 ftr_addr += U[k%3] - L[k%3] + 1;
-                // std::cout << "ftr length: " << U[k%3] - L[k%3] + 1 << " ftr_addr: " << ftr_addr << " ftr lower limit: " << L[k%3] << " tb len: " << tb.size() << std::endl;
             }
             
-            for (int16_t i = L[k%3]; i < U[k%3]+1; i++) { // i-> query_idx, j -> reference_idx
-                int16_t Lprime = std::max(0, static_cast<int16_t>(k)-static_cast<int16_t>(reference_length) + 1); 
-                int16_t j = std::min(static_cast<int16_t>(k), static_cast<int16_t>(reference_length - 1)) - (i-Lprime); 
+            for (int16_t i = L[k%3]; i < U[k%3]+1; i++) {
+                int16_t Lprime = std::max(0, static_cast<int16_t>(k)-static_cast<int16_t>(query_length) + 1); 
+                int16_t j = std::min(static_cast<int16_t>(k), static_cast<int16_t>(query_length - 1)) - (i-Lprime); 
                 
+                // int16_t j = k - i;
+
                 if (j < 0) {
                     fprintf(stderr, "ERROR: j less than 0.\n");
                     exit(1);
@@ -362,6 +377,12 @@ void Talco_xdrop::Tile (
                 int32_t offsetUp = L[k%3]-L[(k+2)%3]+offset;
                 int32_t offsetLeft = L[k%3]-L[(k+2)%3]+offset-1;
 
+                if (k == reference_length + query_length - 2)
+                {
+                    std::cout <<  i << " " << j << "" << k << std::endl;
+                    std::cout  << offset << ", " << offsetDiag << "," << offsetLeft << ", " << offsetUp <<  std::endl;
+
+                }
                 
                 int score_from_prev_tile = 0;
                 if ((k==0) || ((offsetDiag >= 0) && (offsetDiag <= U[(k+1)%3]-L[(k+1)%3]))) {
