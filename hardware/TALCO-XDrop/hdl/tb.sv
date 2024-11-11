@@ -21,7 +21,7 @@
 
 
 module tb();
-    parameter FILE= "../../../dataset/sequences.fa"
+    parameter FILE= "sequences.fa";
     parameter PE_WIDTH = 16;
     parameter DATA_WIDTH = 8;
     parameter NUM_BLOCK  = 1;
@@ -73,6 +73,9 @@ module tb();
     logic   commit;
     logic   traceback;
     logic   stop;
+    
+    string out_pointers;
+    string out_pointer;
 
     int i;
     int fd;
@@ -142,12 +145,15 @@ module tb();
         #5ns clk = !clk;
     end
 
+    
 
     initial begin
         
         clk = 0;
         rst = 1;
         start = 0;
+        
+        out_pointer = "";
         
         in_param = 0;
         total_ref_length = 0;     
@@ -245,9 +251,19 @@ module tb();
             
 
         end
+        $display(out_pointer);
         $finish;
+        
 
-
+    end
+    
+    always@(posedge clk) begin
+        if (tb_valid) begin
+            out_pointer = {out_pointer, $sformatf("%0d", tb_pointer)};
+        end
+        else begin
+            out_pointer = out_pointer;
+        end
     end
 
 
