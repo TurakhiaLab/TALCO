@@ -197,7 +197,10 @@ module tb();
 
             while(1) begin
                 i = 0;
-                while (1) begin
+		if ((curr_ref_addr >= total_ref_length) | (curr_query_addr >= total_query_length)) begin
+			break;
+		end
+		while (1) begin
                     #10ns;
                     ref_wr_en = 1;
                     query_wr_en = 1;
