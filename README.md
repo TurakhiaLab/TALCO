@@ -4,10 +4,9 @@
 [license-link]: https://github.com/TurakhiaLab/TALCO/blob/main/LICENSE
 
 [![License][license-badge]][license-link]
-[![Published ](https://img.shields.io/badge/Accepted_in-HPCA_2024-green.svg)](https://www.hpca-conf.org/2024/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10306077.svg)](https://doi.org/10.5281/zenodo.10306077)
 [![Published in IEEE](https://img.shields.io/badge/Published%20in-IEEE-blue.svg)](https://ieeexplore.ieee.org/document/10476438)
-
+[![Published ](https://img.shields.io/badge/Accepted_in-HPCA_2024-green.svg)](https://www.hpca-conf.org/2024/program/main.php)
 <div align="center">
 <img src="images/TALCO_image.png" style="width:400px; height:400px; margin: 0px 0px -20px 0px;"/>
 </div>
